@@ -1,0 +1,595 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98416301-93A2-4E7C-820A-9F658FB2DE27}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ghuraghuri</RootNamespace>
+    <AssemblyName>Ghuraghuri</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44362</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.46.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.10.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.6.0.1\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\boxicon.css" />
+    <Content Include="css\signup_style.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style_add_place.css" />
+    <Content Include="css\style_add_tour.css" />
+    <Content Include="css\style_admin_master.css" />
+    <Content Include="css\style_blogPage.css" />
+    <Content Include="css\style_blog_details.css" />
+    <Content Include="css\style_dashboard.css" />
+    <Content Include="css\style_editor.css" />
+    <Content Include="css\style_home.css" />
+    <Content Include="css\style_login.css" />
+    <Content Include="css\style_master.css" />
+    <Content Include="css\style_packages.css" />
+    <Content Include="css\style_package_details.css" />
+    <Content Include="css\style_profile.css" />
+    <Content Include="css\style_role.css" />
+    <Content Include="css\style_shopPage.css" />
+    <Content Include="css\style_signup.css" />
+    <Content Include="css\style_spot.css" />
+    <Content Include="css\style_spot_details.css" />
+    <Content Include="css\style_test.css" />
+    <Content Include="css\swipper1.css" />
+    <Content Include="images\backpack.png" />
+    <Content Include="images\bg-1.jpg" />
+    <Content Include="images\bg-2.jpg" />
+    <Content Include="images\bg-3.jpg" />
+    <Content Include="images\bg_login.jpg" />
+    <Content Include="images\blog.jpg" />
+    <Content Include="images\camping.jpg" />
+    <Content Include="images\cycling.jpg" />
+    <Content Include="images\footer.png" />
+    <Content Include="images\ft.jpg" />
+    <Content Include="images\headlight.png" />
+    <Content Include="images\hill.jpg" />
+    <Content Include="images\kayak.jpg" />
+    <Content Include="images\parasailing.jpg" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\sea-beach.jpg" />
+    <Content Include="images\sundarban.jpg" />
+    <Content Include="images\tourism.png" />
+    <Content Include="images\zipline.jpg" />
+    <Content Include="javascript\admin_master_script.js" />
+    <Content Include="javascript\fontawesome.js" />
+    <Content Include="javascript\home_script.js" />
+    <Content Include="javascript\master_script.js" />
+    <Content Include="javascript\profile_script.js" />
+    <Content Include="javascript\script_counter.js" />
+    <Content Include="javascript\swipperBundle.js" />
+    <Content Include="javascript\tinyscript.js" />
+    <Content Include="pages\Home.aspx" />
+    <Content Include="pages\LogInOption.aspx" />
+    <Content Include="pages\ProcessForm.aspx" />
+    <Content Include="pages\ProfileUser.aspx" />
+    <Content Include="pages\SignUpAgency.aspx" />
+    <Content Include="pages\SignUpUser.aspx" />
+    <Content Include="pages\SignupOption.aspx" />
+    <Content Include="pages\LogIn.aspx" />
+    <Content Include="pages\Dashboard.aspx" />
+    <Content Include="pages\Account.aspx" />
+    <Content Include="pages\Profile.aspx" />
+    <Content Include="pages\History.aspx" />
+    <Content Include="pages\tinyMceTest.aspx" />
+    <Content Include="pages\BlogWriting.aspx" />
+    <Content Include="pages\AddTour.aspx" />
+    <Content Include="pages\AddPlace.aspx" />
+    <Content Include="pages\SpotDetails.aspx" />
+    <Content Include="pages\BlogDetails.aspx" />
+    <Content Include="pages\PackageDetails.aspx" />
+    <Content Include="pages\AddProduct.aspx" />
+    <Content Include="pages\ProductDetails.aspx" />
+    <Content Include="pages\WebForm15.aspx" />
+    <Content Include="pages\WebForm16.aspx" />
+    <Content Include="pages\Spot.aspx" />
+    <Content Include="pages\Packages.aspx" />
+    <Content Include="pages\BlogPage.aspx" />
+    <Content Include="pages\ShopPage.aspx" />
+    <Content Include="scripts\tinymce\icons\default\icons.js" />
+    <Content Include="scripts\tinymce\icons\default\icons.min.js" />
+    <Content Include="scripts\tinymce\license.txt" />
+    <Content Include="scripts\tinymce\models\dom\model.js" />
+    <Content Include="scripts\tinymce\models\dom\model.min.js" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\codesample\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\codesample\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\js\emojiimages.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\js\emojiimages.min.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\js\emojis.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\js\emojis.min.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\help\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\help\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\quickbars\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\quickbars\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="scripts\tinymce\skins\content\dark\content.css" />
+    <Content Include="scripts\tinymce\skins\content\dark\content.min.css" />
+    <Content Include="scripts\tinymce\skins\content\default\content.css" />
+    <Content Include="scripts\tinymce\skins\content\default\content.min.css" />
+    <Content Include="scripts\tinymce\skins\content\document\content.css" />
+    <Content Include="scripts\tinymce\skins\content\document\content.min.css" />
+    <Content Include="scripts\tinymce\skins\content\tinymce-5-dark\content.css" />
+    <Content Include="scripts\tinymce\skins\content\tinymce-5-dark\content.min.css" />
+    <Content Include="scripts\tinymce\skins\content\tinymce-5\content.css" />
+    <Content Include="scripts\tinymce\skins\content\tinymce-5\content.min.css" />
+    <Content Include="scripts\tinymce\skins\content\writer\content.css" />
+    <Content Include="scripts\tinymce\skins\content\writer\content.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\content.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\content.inline.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\content.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\skin.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\skin.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\skin.shadowdom.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide-dark\skin.shadowdom.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\content.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\content.inline.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\content.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\skin.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\skin.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\skin.shadowdom.css" />
+    <Content Include="scripts\tinymce\skins\ui\oxide\skin.shadowdom.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\content.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\content.inline.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\content.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\skin.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\skin.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5-dark\skin.shadowdom.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\content.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\content.inline.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\content.inline.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\content.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\skin.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\skin.min.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\skin.shadowdom.css" />
+    <Content Include="scripts\tinymce\skins\ui\tinymce-5\skin.shadowdom.min.css" />
+    <Content Include="scripts\tinymce\themes\silver\theme.js" />
+    <Content Include="scripts\tinymce\themes\silver\theme.min.js" />
+    <Content Include="scripts\tinymce\tinymce.js" />
+    <Content Include="scripts\tinymce\tinymce.min.js" />
+    <Content Include="TestGrigview.aspx" />
+    <Content Include="TestImageUpload.aspx" />
+    <Content Include="tinyMce\tinytest2.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pages\LogInOption.aspx.cs">
+      <DependentUpon>LogInOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\LogInOption.aspx.designer.cs">
+      <DependentUpon>LogInOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ProcessForm.aspx.cs">
+      <DependentUpon>ProcessForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\ProcessForm.aspx.designer.cs">
+      <DependentUpon>ProcessForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ProfileUser.aspx.cs">
+      <DependentUpon>ProfileUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\ProfileUser.aspx.designer.cs">
+      <DependentUpon>ProfileUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SignUpAgency.aspx.cs">
+      <DependentUpon>SignUpAgency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\SignUpAgency.aspx.designer.cs">
+      <DependentUpon>SignUpAgency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SignUpUser.aspx.cs">
+      <DependentUpon>SignUpUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\SignUpUser.aspx.designer.cs">
+      <DependentUpon>SignUpUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SignupOption.aspx.cs">
+      <DependentUpon>SignupOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\SignupOption.aspx.designer.cs">
+      <DependentUpon>SignupOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\tinyMceTest.aspx.cs">
+      <DependentUpon>tinyMceTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\tinyMceTest.aspx.designer.cs">
+      <DependentUpon>tinyMceTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\BlogWriting.aspx.cs">
+      <DependentUpon>BlogWriting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\BlogWriting.aspx.designer.cs">
+      <DependentUpon>BlogWriting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\AddTour.aspx.cs">
+      <DependentUpon>AddTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\AddTour.aspx.designer.cs">
+      <DependentUpon>AddTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\AddPlace.aspx.cs">
+      <DependentUpon>AddPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\AddPlace.aspx.designer.cs">
+      <DependentUpon>AddPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\SpotDetails.aspx.cs">
+      <DependentUpon>SpotDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\SpotDetails.aspx.designer.cs">
+      <DependentUpon>SpotDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\BlogDetails.aspx.cs">
+      <DependentUpon>BlogDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\BlogDetails.aspx.designer.cs">
+      <DependentUpon>BlogDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\PackageDetails.aspx.cs">
+      <DependentUpon>PackageDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\PackageDetails.aspx.designer.cs">
+      <DependentUpon>PackageDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\WebForm15.aspx.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\WebForm15.aspx.designer.cs">
+      <DependentUpon>WebForm15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\WebForm16.aspx.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\WebForm16.aspx.designer.cs">
+      <DependentUpon>WebForm16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Spot.aspx.cs">
+      <DependentUpon>Spot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Spot.aspx.designer.cs">
+      <DependentUpon>Spot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Packages.aspx.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Packages.aspx.designer.cs">
+      <DependentUpon>Packages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\BlogPage.aspx.cs">
+      <DependentUpon>BlogPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\BlogPage.aspx.designer.cs">
+      <DependentUpon>BlogPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ShopPage.aspx.cs">
+      <DependentUpon>ShopPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\ShopPage.aspx.designer.cs">
+      <DependentUpon>ShopPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestGrigview.aspx.cs">
+      <DependentUpon>TestGrigview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestGrigview.aspx.designer.cs">
+      <DependentUpon>TestGrigview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestImageUpload.aspx.cs">
+      <DependentUpon>TestImageUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestImageUpload.aspx.designer.cs">
+      <DependentUpon>TestImageUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tinyMce\tinytest2.aspx.cs">
+      <DependentUpon>tinytest2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tinyMce\tinytest2.aspx.designer.cs">
+      <DependentUpon>tinytest2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Oracle.ManagedDataAccess.Client.Configuration.Section.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="pages\MasterPage.Master" />
+    <Content Include="pages\AdminMaster.Master" />
+    <Content Include="scripts\tinymce\langs\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="scripts\tinymce\tinymce.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1878</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44362/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets'))" />
+    <Error Condition="!Exists('..\packages\TinyMCE.6.4.2\build\TinyMCE.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\TinyMCE.6.4.2\build\TinyMCE.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
+  <Import Project="..\packages\TinyMCE.6.4.2\build\TinyMCE.targets" Condition="Exists('..\packages\TinyMCE.6.4.2\build\TinyMCE.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

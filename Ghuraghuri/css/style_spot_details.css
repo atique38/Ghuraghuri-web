@@ -1,0 +1,22 @@
+﻿.gallery{
+    padding-top:5rem;
+   
+}
+.swiper {
+    width: 100%;
+    padding-top: 3.125rem;
+    
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 18.75rem;
+    height: 18.75rem;
+}
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit:cover;
+    }

@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.Master.cs" Inherits="Ghuraghuri.pages.test" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	
+    
+	<link rel="stylesheet" href="../css/style_test.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="Home.aspx" class="brand">
+			<img src="/images/tourism.png" alt="logo"/>
+			<span class="text">Ghuraghuri</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active" id="List1" runat="server">
+				<a id="Dashboard" runat="server" onserverclick="Dashboard_ServerClick">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li id="List2" runat="server">
+				<a id="Account" runat="server" onserverclick="Account_ServerClick">
+					<i class='bx bxs-user-account'></i>
+					<span class="text">Account</span>
+				</a>
+			</li>
+			<li id="List3" runat="server">
+				<a id="History" runat="server" onserverclick="History_ServerClick">
+					<i class='bx bx-history'></i>
+					<span class="text">Booking History</span>
+				</a>
+			</li>
+			<li id="List12" runat="server">
+				<a id="A1" runat="server" onserverclick="History_ServerClick">
+					<i class='bx bx-history'></i>
+					<span class="text">Bookings</span>
+				</a>
+			</li>
+			
+			<li id="List4" runat="server">
+				<a href="#">
+					<i class='bx bxs-shopping-bag'></i>
+					<span class="text">Orders</span>
+				</a>
+			</li>
+			<li id="List11" runat="server">
+				<a href="#">
+					<i class='bx bxs-shopping-bag'></i>
+					<span class="text">Order History</span>
+				</a>
+			</li>
+			<li id="List5" runat="server">
+				<a href="#">
+					<i class='bx bxs-comment-dots'></i>
+					<span class="text">Reviews</span>
+				</a>
+			</li>
+			<li id="List6" runat="server">
+				<a id="add_tour" runat="server" onserverclick="add_tour_ServerClick">
+					<i class='bx bx-plus-circle'></i>
+					<span class="text">Add Tour</span>
+				</a>
+			</li>
+			<li id="List8" runat="server">
+				<a id="Add_place" runat="server" onserverclick="Add_place_ServerClick">
+					<i class='bx bx-plus-circle'></i>
+					<span class="text">Add Place</span>
+				</a>
+			</li>
+			<li id="List10" runat="server">
+				<a id="Add_product" runat="server" onserverclick="Add_product_ServerClick">
+					<i class='bx bx-plus-circle'></i>
+					<span class="text">Add Product</span>
+				</a>
+			</li>
+			<li id="List7" runat="server">
+				<a id="Blog" runat="server" onserverclick="Blog_ServerClick">
+					<i class='bx bxl-blogger'></i>
+					<span class="text">Blog</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			
+			<li id="List9" runat="server">
+				<a id="logoutBtn" class="logout" runat="server" onserverclick="logoutBtn_ServerClick">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<h3 runat="server" id="Menu_item">Dashboard</h3>
+			<h4 id="UserTxt" runat="server">Admin</h4>
+			<a href="#" class="profile">
+				<img src="../images/tourism.png">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<form id="form1" runat="server" enctype="multipart/form-data">
+				<div>
+					<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+					</asp:ContentPlaceHolder>
+				</div>
+			</form>
+		</main>
+		
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+   
+	<script src="../javascript/admin_master_script.js"></script>
+</body>
+</html>

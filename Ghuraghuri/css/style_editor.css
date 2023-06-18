@@ -1,0 +1,76 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,400;1,500&family=Roboto:wght@100;300;400;500&display=swap');
+/*#10221b
+    #08B38B
+*/
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.editor {
+    margin: 1.5rem;
+    margin-top:1rem;
+}
+
+
+.blog_title {
+    margin: 1.5rem;
+}
+hr {
+    margin: 0 1rem;
+}
+
+.container {
+    
+    display: flex;
+    gap:2rem;
+    flex-wrap:wrap;
+}
+.content {
+    
+    background: #ffffff;
+    width: 30rem;
+    border-radius: .8rem;
+    padding-bottom: 1rem;
+}
+.container .content .info {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    color: #808080;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.inp {
+    width: 20rem;
+    background: #b9b9b9;
+    border: none;
+    outline: none;
+    height: 2rem;
+    border-radius: .5rem;
+}
+
+    .inp:focus {
+        background: #acfcd9;
+    }
+
+.btn {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .4rem .5rem;
+    background: #08B38B;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    margin: 1.5rem;
+}
+
+    .btn:hover {
+        background: #1EDFAA;
+        cursor: pointer;
+    }
+

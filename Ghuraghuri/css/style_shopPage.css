@@ -1,0 +1,84 @@
+﻿section {
+    padding-top: 5rem;
+}
+
+.shop {
+    background: #eee;
+}
+.shop_container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+}
+
+.heading {
+    color: black;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+}
+.slide {
+    border: .2rem solid black;
+    width: 18rem;
+}
+    .slide:hover .image .icons {
+        transform: translateY(0);
+    }
+    .slide .image {
+        position: relative;
+        overflow: hidden;
+        height: 18rem;
+        width: 100%;
+        background: #eee;
+    }
+        .slide .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            padding: .8rem;
+            padding-bottom: 2.5rem;
+        }
+        .slide .image .icons {
+            width: 100%;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0;
+            text-align: center;
+            z-index: 10;
+            transform: translateY(6rem);
+        }
+            .slide .image .icons a {
+                height: 3rem;
+                width: 3rem;
+                line-height: 3rem;
+                font-size: 1.5rem;
+                background: #10221b;
+                color: white;
+                margin: 0 .2rem;
+            }
+                .slide .image .icons a:hover {
+                    background: #08B38B;
+                }
+    .slide .content {
+        padding: 1rem 0;
+        text-align: center;
+    }
+        .slide .content h3 {
+            font-size: 1.3rem;
+        }
+        .slide .content .price {
+            padding: .5rem;
+            font-size: 1.3rem;
+            color: #08B38B;
+        }
+        .slide .content .star i {
+            font-size: 1.3rem;
+            color: #10221b;
+        }
+@media (max-width: 540px) {
+    .shop_container {
+        justify-content: center;
+    }
+
+   
+}

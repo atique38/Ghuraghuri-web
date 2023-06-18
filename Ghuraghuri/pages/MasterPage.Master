@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Ghuraghuri.pages.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://kit.fontawesome.com/e9586f465a.js" crossorigin="anonymous"></script>-->
+    <script src="../javascript/fontawesome.js"></script>
+    <link rel="stylesheet" href="../css/style_master.css" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form runat="server">
+    <header class="header">
+        <a href="Home.aspx" runat="server" class="logo"><img src="/images/tourism.png" alt="logo"/>Ghuraghuri</a>
+       
+        <nav class="nav">
+            <div id="nav_close" class="fa-solid fa-xmark"></div>
+            <a class="home" href="Home.aspx" runat="server">Home</a>
+            <a class="packages" href="Packages.aspx" runat="server">Packages</a>
+            <a class="nav_spot" href="Spot.aspx" runat="server">Tourist-spot</a>
+            <a class="nav_Shop" href="ShopPage.aspx" runat="server">Shop</a>
+            <a class="nav_blog" href="BlogPage.aspx" runat="server">Blog</a>
+            <a id="login_link" class="login" href="LogInOption.aspx" runat="server">Log In</a>
+            
+            <!--<asp:LinkButton ID="logout" runat="server" Visible="false" OnClick="logout_Click" >Log Out</asp:LinkButton>-->
+           
+            
+        </nav>
+        
+        <div class="icons">
+          <div id="menu" class="fa-solid fa-bars"></div>
+          <a id="profile_link" class="fa-solid fa-user" runat="server" visible="False" onserverclick="profile_link_ServerClick"></a>
+          <a href="#" class="fa-solid fa-cart-shopping" runat="server"></a>
+          <div id="search" class="fa-sharp fa-solid fa-magnifying-glass" runat="server" visible="false"></div>
+        </div>
+    </header>
+    
+     <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+     </div>
+     </form>
+     <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a class="home" href="Home.aspx">Home</a>
+          <a class="packages" href="Packages.aspx">Packages</a>
+          <a class="nav_spot" href="Spot.aspx">Tourist-spot</a>
+          <a class="nav_Shop" href="ShopPage.aspx">Shop</a>
+          <a class="nav_blog" href="BlogPage.aspx">Blog</a>
+          <a class="login" href="login">Log In</a>
+        </div>
+
+        <div class="box">
+          <h3>Extra Links</h3>
+          <a class="account" href="#">My account</a>
+          <a class="order" href="#">My order</a>
+          <a class="faq" href="#">FAQ</a>
+          <a class="support" href="#">Support</a>
+          <a class="terms" href="#">Terms and condition</a>
+          <a class="privacy" href="#">Privacy policy</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact info</h3>
+          <a href="#"><i class="fa-solid fa-phone"></i>+8801756365214</a>
+          <a href="#"><i class="fa-solid fa-envelope"></i>ghuraghuriii@gmail.com</a>
+          <a href="#"><i class="fa-sharp fa-solid fa-map-location-dot"></i>Teligati, Khulna,Bangladesh</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact info</h3>
+          <a href="#"><i class="fa-brands fa-facebook"></i></i>Facebook</a>
+          <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i>Instragram</a>
+          <a href="#"><i class="fa-brands fa-github"></i>Github</a>
+        </div>
+
+      </div>
+      <div class="credit">Created by <span>Atique</span> |all right reserved!</div>
+    </section>
+
+    <script src="../javascript/master_script.js"></script>
+</body>
+</html>
