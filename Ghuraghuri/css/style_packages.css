@@ -1,15 +1,37 @@
 ﻿section {
     padding-top: 5rem;
 }
-.heading {
-    color: black;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 1.7rem;
-}
+
 .package {
     background: #eee;
 }
+.search_bar {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+}
+.inp {
+    width: 30rem;
+    background: #acfcd9;
+    border: none;
+    outline: none;
+    height: 2rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    padding: 1rem .5rem;
+    font-size: 1rem;
+    text-transform: none;
+}
+.src_btn {
+    background: #08B38B;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+
+    .src_btn i {
+        padding: .5rem;
+        color: white;
+    }
 .package_container {
     display: flex;
     flex-wrap: wrap;

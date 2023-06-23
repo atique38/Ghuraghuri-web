@@ -3,147 +3,160 @@
     <link href="../css/style_packages.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <section class="package" id="package">
-      <h1 class="heading">Popular Packages</h1>
-      
-      <div class="package_container" id="package_container" runat="server">
-        <div class="packages_slide">
-            <div class="image">
-                <img src="/images/sea-beach.jpg" alt="">
-            </div>
-            <div class="content">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <section class="package" id="package">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div class="search_bar">
+                    <!--<h1 class="heading">Blog Posts</h1>-->
+                    <asp:TextBox ID="searchTxt" runat="server" placeholder="Search place name" class="inp"></asp:TextBox>
+                    <asp:LinkButton ID="SearchBtn" runat="server" class="src_btn" OnClick="SearchBtn_Click">
+                       <i class="fa-solid fa-magnifying-glass"></i>
+                    </asp:LinkButton>
 
-                <div class="agency">
-                    <i class="fa-solid fa-building"></i>
-                    <p>Agency Name</p>
                 </div>
+                <asp:Label ID="error" runat="server" Text="" ForeColor="Red"></asp:Label>
+                <div class="package_container" id="package_container" runat="server">
+                    <div class="packages_slide">
+                        <div class="image">
+                            <img src="/images/sea-beach.jpg" alt="">
+                        </div>
+                        <div class="content">
 
-                <h3>Package Name</h3>
-                <p>3 days,4 night</p>
+                            <div class="agency">
+                                <i class="fa-solid fa-building"></i>
+                                <p>Agency Name</p>
+                            </div>
 
-                <div class="price_rating">
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <p style="color: #DC7303;">4.5</p>
+                            <h3>Package Name</h3>
+                            <p>3 days,4 night</p>
+
+                            <div class="price_rating">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p style="color: #DC7303;">4.5</p>
+                                </div>
+                                <p class="amount">5000tk</p>
+                            </div>
+
+                            <a class="explore_btn">Explore Now</a>
+
+                        </div>
+
                     </div>
-                    <p class="amount">5000tk</p>
-                </div>
 
-                <a class="explore_btn">Explore Now</a>
+                    <div class="packages_slide">
+                        <div class="image">
+                            <img src="/images/sea-beach.jpg" alt="">
+                        </div>
+                        <div class="content">
 
-            </div>
+                            <div class="agency">
+                                <i class="fa-solid fa-building"></i>
+                                <p>Agency Name</p>
+                            </div>
 
-        </div>
+                            <h3>Package Name</h3>
+                            <p>3 days,4 night</p>
 
-        <div class="packages_slide">
-            <div class="image">
-                <img src="/images/sea-beach.jpg" alt="">
-            </div>
-            <div class="content">
+                            <div class="price_rating">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p style="color: #DC7303;">4.5</p>
+                                </div>
+                                <p class="amount">5000tk</p>
+                            </div>
+                            <a href="#" class="explore_btn">Explore Now</a>
 
-                <div class="agency">
-                    <i class="fa-solid fa-building"></i>
-                    <p>Agency Name</p>
-                </div>
+                        </div>
 
-                <h3>Package Name</h3>
-                <p>3 days,4 night</p>
-
-                <div class="price_rating">
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <p style="color: #DC7303;">4.5</p>
                     </div>
-                    <p class="amount">5000tk</p>
-                </div>
-                <a href="#" class="explore_btn">Explore Now</a>
 
-            </div>
+                    <div class="packages_slide">
+                        <div class="image">
+                            <img src="/images/sea-beach.jpg" alt="">
+                        </div>
+                        <div class="content">
 
-        </div>
+                            <div class="agency">
+                                <i class="fa-solid fa-building"></i>
+                                <p>Agency Name</p>
+                            </div>
 
-        <div class="packages_slide">
-            <div class="image">
-                <img src="/images/sea-beach.jpg" alt="">
-            </div>
-            <div class="content">
+                            <h3>Package Name</h3>
+                            <p>3 days,4 night</p>
 
-                <div class="agency">
-                    <i class="fa-solid fa-building"></i>
-                    <p>Agency Name</p>
-                </div>
+                            <div class="price_rating">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p style="color: #DC7303;">4.5</p>
+                                </div>
+                                <p class="amount">5000tk</p>
+                            </div>
+                            <a href="#" class="explore_btn">Explore Now</a>
 
-                <h3>Package Name</h3>
-                <p>3 days,4 night</p>
+                        </div>
 
-                <div class="price_rating">
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <p style="color: #DC7303;">4.5</p>
                     </div>
-                    <p class="amount">5000tk</p>
-                </div>
-                <a href="#" class="explore_btn">Explore Now</a>
 
-            </div>
+                    <div class="packages_slide">
+                        <div class="image">
+                            <img src="/images/sea-beach.jpg" alt="">
+                        </div>
+                        <div class="content">
 
-        </div>
+                            <div class="agency">
+                                <i class="fa-solid fa-building"></i>
+                                <p>Agency Name</p>
+                            </div>
 
-        <div class="packages_slide">
-            <div class="image">
-                <img src="/images/sea-beach.jpg" alt="">
-            </div>
-            <div class="content">
+                            <h3>Package Name</h3>
+                            <p>3 days,4 night</p>
 
-                <div class="agency">
-                    <i class="fa-solid fa-building"></i>
-                    <p>Agency Name</p>
-                </div>
+                            <div class="price_rating">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p style="color: #DC7303;">4.5</p>
+                                </div>
+                                <p class="amount">5000tk</p>
+                            </div>
+                            <a href="#" class="explore_btn">Explore Now</a>
 
-                <h3>Package Name</h3>
-                <p>3 days,4 night</p>
+                        </div>
 
-                <div class="price_rating">
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <p style="color: #DC7303;">4.5</p>
                     </div>
-                    <p class="amount">5000tk</p>
-                </div>
-                <a href="#" class="explore_btn">Explore Now</a>
 
-            </div>
+                    <div class="packages_slide">
+                        <div class="image">
+                            <img src="/images/sea-beach.jpg" alt="">
+                        </div>
+                        <div class="content">
 
-        </div>
+                            <div class="agency">
+                                <i class="fa-solid fa-building"></i>
+                                <p>Agency Name</p>
+                            </div>
 
-        <div class="packages_slide">
-            <div class="image">
-                <img src="/images/sea-beach.jpg" alt="">
-            </div>
-            <div class="content">
+                            <h3>Package Name</h3>
+                            <p>3 days,4 night</p>
 
-                <div class="agency">
-                    <i class="fa-solid fa-building"></i>
-                    <p>Agency Name</p>
-                </div>
+                            <div class="price_rating">
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <p style="color: #DC7303;">4.5</p>
+                                </div>
+                                <p class="amount">5000tk</p>
+                            </div>
+                            <a href="#" class="explore_btn">Explore Now</a>
 
-                <h3>Package Name</h3>
-                <p>3 days,4 night</p>
+                        </div>
 
-                <div class="price_rating">
-                    <div class="rate">
-                        <i class="fa-solid fa-star"></i>
-                        <p style="color: #DC7303;">4.5</p>
                     </div>
-                    <p class="amount">5000tk</p>
+
                 </div>
-                <a href="#" class="explore_btn">Explore Now</a>
-
-            </div>
-
-        </div>
-
-      </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+       
     </section>
-    <script src="../javascript/home_script.js"></script>
+    <script src="../javascript/passing_script.js"></script>
 </asp:Content>

@@ -148,6 +148,7 @@
     <Content Include="javascript\fontawesome.js" />
     <Content Include="javascript\home_script.js" />
     <Content Include="javascript\master_script.js" />
+    <Content Include="javascript\passing_script.js" />
     <Content Include="javascript\profile_script.js" />
     <Content Include="javascript\script_counter.js" />
     <Content Include="javascript\swipperBundle.js" />
