@@ -25,26 +25,33 @@
        
 
     </div>
-    <div class="right">
-        <h3 style="font-size:1.25rem">Price:<span style="color: #DC7303" id="pdct_price" runat="server">500tk</span></h3>
-            
-        <h3>Select Quantity</h3>
-            
-        <asp:LinkButton ID="LinkButton2" runat="server" class="date" Width="100%" ForeColor="Black" OnClick="LinkButton2_Click">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span id="pdctCount" runat="server">Select Quantity</span>
-        </asp:LinkButton>
-        <asp:Panel ID="Panel1" runat="server" class="person" Visible="false">
-            <small style="color:#808080;font-weight:bold">10 Products are available</small>
-            <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Text="1" class="inp"></asp:TextBox>
-            <asp:Button ID="ApplyBtn" runat="server" Text="Apply" class="btn" OnClick="ApplyBtn_Click" />
-        </asp:Panel>
-        <div class="btn_ptoduct" >
-            <asp:Button ID="BuyBtn" runat="server" Text="Buy Now" class="btn_pdct btn1" OnClick="BuyBtn_Click"/>
-            <asp:Button ID="BookBtn" runat="server" Text="Add To Cart" class="btn_pdct btn2" OnClick="BookBtn_Click"/>
-        </div>
-        
-         </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div class="right">
+                    <asp:Label ID="error" runat="server" Text="" ForeColor="Red"></asp:Label>
+                    <h3 style="font-size: 1.25rem">Price:<span style="color: #DC7303" id="pdct_price" runat="server">500tk</span></h3>
+
+                    <h3>Select Quantity</h3>
+
+                    <asp:LinkButton ID="LinkButton2" runat="server" class="date" Width="100%" ForeColor="Black" OnClick="LinkButton2_Click">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="pdctCount" runat="server">Select Quantity</span>
+                    </asp:LinkButton>
+                    <asp:Panel ID="Panel1" runat="server" class="person" Visible="false">
+                        <small style="color: #808080; font-weight: bold">10 Products are available</small>
+                        <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Text="1" class="inp" OnTextChanged="TextBox1_TextChanged" AutoPostBack="true"></asp:TextBox>
+                        <asp:Button ID="ApplyBtn" runat="server" Text="Apply" class="btn" OnClick="ApplyBtn_Click" />
+                    </asp:Panel>
+                    <div class="btn_ptoduct">
+                        <asp:Button ID="BuyBtn" runat="server" Text="Buy Now" class="btn_pdct btn1" OnClick="BuyBtn_Click" />
+                        <asp:Button ID="AddToCartBtn" runat="server" Text="Add To Cart" class="btn_pdct btn2" OnClick="AddToCartBtn_Click" />
+                    </div>
+
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    
     </section>
     <section class="details">
         

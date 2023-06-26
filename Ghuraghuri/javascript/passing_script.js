@@ -12,3 +12,13 @@ function packageClicked(id) {
 function productClicked(id) {
     window.location.href = "ProductDetails.aspx?data=" + encodeURIComponent(id);
 }
+function addToCart(id) {
+    window.location.href = "Cart.aspx?data=" + encodeURIComponent(id);
+}
+
+function validateNonNegative(textBox) {
+    var value = parseInt(textBox.value);
+    if (value <= 0) {
+        textBox.value = 1
+    }
+}

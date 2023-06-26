@@ -129,3 +129,6 @@ function packageClicked(id) {
 function productClicked(id) {
     window.location.href = "ProductDetails.aspx?data=" + encodeURIComponent(id);
 }
+function addToCart(id) {
+    window.location.href = "Cart.aspx?data=" + encodeURIComponent(id);
+}

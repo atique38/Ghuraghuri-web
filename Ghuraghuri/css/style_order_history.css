@@ -1,0 +1,22 @@
+﻿.order_history {
+    margin: 1.3rem;
+    
+}
+.cart_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+    .cart_table .th {
+        text-align: left;
+        padding: .4rem;
+        color: white;
+        background: #08B38B;
+        font-size: 1.1rem;
+    }
+
+    .cart_table .td {
+        padding: .5rem;
+    }
+.odd_row {
+    background-color: white;
+}

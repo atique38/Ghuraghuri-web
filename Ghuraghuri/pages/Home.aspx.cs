@@ -19,6 +19,7 @@ namespace Ghuraghuri.pages
         OracleConnection con = new OracleConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
+            Constant.clicked = true;
             if (Session["u_name"] != null)
             {
                started_btn1.Visible = false;
@@ -353,6 +354,7 @@ namespace Ghuraghuri.pages
 
                     HtmlGenericControl a1 = new HtmlGenericControl("a");
                     a1.Attributes["class"] = "fa-solid fa-cart-shopping";
+                    a1.Attributes["onclick"] = "addToCart('" + id + "')";
                     HtmlGenericControl a2 = new HtmlGenericControl("a");
                     a2.Attributes["class"] = "fa-solid fa-eye";
                     a2.Attributes["onclick"] = "productClicked('" + id + "')"; ;

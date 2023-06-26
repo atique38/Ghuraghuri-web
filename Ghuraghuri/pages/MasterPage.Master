@@ -38,7 +38,7 @@
         <div class="icons">
           <div id="menu" class="fa-solid fa-bars"></div>
           <a id="profile_link" class="fa-solid fa-user" runat="server" visible="False" onserverclick="profile_link_ServerClick"></a>
-          <a href="#" class="fa-solid fa-cart-shopping" runat="server"></a>
+          <a class="fa-solid fa-cart-shopping" runat="server" id="cart" onserverclick="cart_ServerClick" visible="false"></a>
           <div id="search" class="fa-sharp fa-solid fa-magnifying-glass" runat="server" visible="false"></div>
         </div>
     </header>

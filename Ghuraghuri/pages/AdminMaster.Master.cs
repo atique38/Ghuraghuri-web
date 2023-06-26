@@ -54,7 +54,13 @@ namespace Ghuraghuri.pages
                 List1.Attributes.Remove("class");
                 Menu_item.InnerText = "Add Product";
             }
-            
+            else if (Session["click"] != null && Session["click"].Equals("order_hist"))
+            {
+                List11.Attributes.Add("class", "active");
+                List1.Attributes.Remove("class");
+                Menu_item.InnerText = "Order History";
+            }
+
 
             //navbar info
             string name="";
@@ -151,6 +157,12 @@ namespace Ghuraghuri.pages
             Session.Clear();
             Session["isLogout"] = true;
             Response.Redirect("Home.aspx");
+        }
+
+        protected void orderHist_ServerClick(object sender, EventArgs e)
+        {
+            Session["click"] = "order_hist";
+            Response.Redirect("OrderHistory.aspx");
         }
     }
 }

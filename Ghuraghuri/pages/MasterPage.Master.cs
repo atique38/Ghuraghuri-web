@@ -16,12 +16,14 @@ namespace Ghuraghuri.pages
                 login_link.Visible = false;
                 logout.Visible = true;
                 profile_link.Visible = true;
+               
             }
             else
             {
                 login_link.Visible = true;
                 logout.Visible = false;
                 profile_link.Visible = false;
+                
             }
 
             if (Session["isLogout"]!=null && (bool)Session["isLogout"])
@@ -31,6 +33,20 @@ namespace Ghuraghuri.pages
                 profile_link.Visible = false;
                 Session["isLogout"] = false;
             }
+
+            if(Session["login_opt"]!=null && Session["u_name"]!=null)
+            {
+                if (Session["login_opt"].Equals("user"))
+                {
+                    cart.Visible = true;
+                }
+                else
+                {
+                    cart.Visible= false;
+                }
+                    
+            }
+            
         }
 
         protected void logout_Click(object sender, EventArgs e)
@@ -47,6 +63,12 @@ namespace Ghuraghuri.pages
         {
             Session["click"] = "dash";
             Response.Redirect("Dashboard.aspx");
+        }
+
+        protected void cart_ServerClick(object sender, EventArgs e)
+        {
+            Session["cart_clicked"] = true;
+            Response.Redirect("Cart.aspx");
         }
     }
 }

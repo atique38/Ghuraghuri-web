@@ -1,0 +1,50 @@
+﻿section{
+    padding-top:5rem;
+}
+.deliver_container {
+    width:30rem;
+    margin:0 auto;
+    background:#eee;
+    padding:1rem;
+    box-shadow:0 .5rem .5rem 0 rgba(0,0,0,.5);
+    border-radius:.7rem;
+}
+.inp {
+    display: block;
+    width: 25rem;
+    background:#91e4c0;
+    border: none;
+    outline: none;
+    height: 2rem;
+    border-radius: .5rem;
+    padding:.5rem;
+    margin:.5rem;
+}
+    .inp:focus {
+        background: #76fec3;
+    }
+    .lb{
+        margin:.5rem;
+        font-weight:bold;
+    }
+    .rb{
+        color:black;
+        margin:.5rem;
+    }
+.btn {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .4rem .5rem;
+    background: #08B38B;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    margin-right: 0;
+    margin-left: auto;
+    display: block;
+}
+
+    .btn:hover {
+        background: #1EDFAA;
+        cursor: pointer;
+    }
