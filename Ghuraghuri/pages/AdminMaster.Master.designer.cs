@@ -240,6 +240,15 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserTxt;
 
         /// <summary>
+        /// navImg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage navImg;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

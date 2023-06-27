@@ -103,44 +103,66 @@ namespace Ghuraghuri.pages
         {
             try
             {
-                if (pdctCount.InnerText.Equals("Select Quantity"))
+                if (Session["login_opt"] != null && (Session["login_opt"].Equals("agency") || Session["login_opt"].Equals("admin")))
                 {
-                    error.Text = "Please Select quantity";
+                    error.Text = "Please log in as user to buy something";
+                }
+                else if (Session["login_opt"] != null && Session["login_opt"].Equals("user"))
+                {
+                    if (Session["u_email"] != null)
+                    {
+                        if (pdctCount.InnerText.Equals("Select Quantity"))
+                        {
+                            error.Text = "Please Select quantity";
+                        }
+                        else
+                        {
+                            string id = Request.QueryString["data"];
+                            con.Open();
+                            string del = "delete from temp_cart";
+                            OracleCommand oracleCommand=new OracleCommand(del, con);
+                            oracleCommand.ExecuteNonQuery();
+                            string qr = "select product_name,price,image from product where id='" + id + "'";
+                            OracleCommand cmd = new OracleCommand(qr, con);
+                            OracleDataReader reader = cmd.ExecuteReader();
+
+                            while (reader.Read())
+                            {
+                                string productName, price;
+                                productName = reader["PRODUCT_NAME"].ToString();
+                                price = reader["PRICE"].ToString();
+                                //pr = Convert.ToInt64(price);
+
+                                byte[] imageData = (byte[])reader["IMAGE"];
+                                string base64Image = Convert.ToBase64String(imageData);
+                                string imageUrl = "data:image/jpeg;base64," + base64Image;
+
+                                string qr2 = "insert into temp_cart (PRODUCT_ID,PRODUCT_NAME,PRICE,QUANTITY,IMAGE,USER_EMAIL) values(:id,:name,:price,:qn,:img,:em)";
+                                OracleCommand cmd2 = new OracleCommand(qr2, con);
+                                cmd2.Parameters.Add(":id", OracleDbType.Int32).Value = id;
+                                cmd2.Parameters.Add(":name", OracleDbType.Varchar2).Value = productName;
+                                cmd2.Parameters.Add(":price", OracleDbType.Int64).Value = price;
+                                cmd2.Parameters.Add(":qn", OracleDbType.Int32).Value = pdctCount.InnerText;
+                                cmd2.Parameters.Add(":img", OracleDbType.Blob).Value = imageData;
+                                cmd2.Parameters.Add(":em", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
+                                cmd2.ExecuteNonQuery();
+
+                            }
+                            con.Close();
+                            Session["buyBtn"] = true;
+                            Response.Redirect("DeliveryInfo.aspx");
+                        }
+                    }
+                    else
+                    {
+                        error.Text = "Please Log In First";
+                    }
                 }
                 else
                 {
-                    string id = Request.QueryString["data"];
-                    con.Open();
-                    string qr = "select product_name,price,image from product where id='" + id + "'";
-                    OracleCommand cmd = new OracleCommand(qr, con);
-                    OracleDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string productName, price;
-                        productName = reader["PRODUCT_NAME"].ToString();
-                        price = reader["PRICE"].ToString();
-                        //pr = Convert.ToInt64(price);
-
-                        byte[] imageData = (byte[])reader["IMAGE"];
-                        string base64Image = Convert.ToBase64String(imageData);
-                        string imageUrl = "data:image/jpeg;base64," + base64Image;
-
-                        string qr2 = "insert into temp_cart (PRODUCT_ID,PRODUCT_NAME,PRICE,QUANTITY,IMAGE,USER_EMAIL) values(:id,:name,:price,:qn,:img,:em)";
-                        OracleCommand cmd2 = new OracleCommand(qr2, con);
-                        cmd2.Parameters.Add(":id", OracleDbType.Int32).Value = id;
-                        cmd2.Parameters.Add(":name", OracleDbType.Varchar2).Value = productName;
-                        cmd2.Parameters.Add(":price", OracleDbType.Int64).Value = price;
-                        cmd2.Parameters.Add(":qn", OracleDbType.Int32).Value = pdctCount.InnerText;
-                        cmd2.Parameters.Add(":img", OracleDbType.Blob).Value = imageData;
-                        cmd2.Parameters.Add(":em", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
-                        cmd2.ExecuteNonQuery();
-
-                    }
-                    con.Close();
-                    Session["buyBtn"] = true;
-                    Response.Redirect("DeliveryInfo.aspx");
+                    error.Text = "Please Log In First";
                 }
+
             }
             catch (Exception ex)
             {
@@ -153,43 +175,66 @@ namespace Ghuraghuri.pages
         {
             try
             {
-                if (pdctCount.InnerText.Equals("Select Quantity"))
+                if (Session["login_opt"] != null && (Session["login_opt"].Equals("agency") || Session["login_opt"].Equals("admin")))
                 {
-                    error.Text = "Please Select quantity";
+                    error.Text = "Please log in as user to buy something";
+                }
+                else if (Session["login_opt"] != null && Session["login_opt"].Equals("user"))
+                {
+                    if (Session["u_email"] != null)
+                    {
+                        if (pdctCount.InnerText.Equals("Select Quantity"))
+                        {
+                            error.Text = "Please Select quantity";
+                        }
+                        else
+                        {
+                            string id = Request.QueryString["data"];
+                            if(!isItemAlreadyExist(id))
+                            {
+                                con.Open();
+                                string qr = "select product_name,price,image from product where id='" + id + "'";
+                                OracleCommand cmd = new OracleCommand(qr, con);
+                                OracleDataReader reader = cmd.ExecuteReader();
+
+                                while (reader.Read())
+                                {
+                                    string productName, price;
+                                    productName = reader["PRODUCT_NAME"].ToString();
+                                    price = reader["PRICE"].ToString();
+                                    //pr = Convert.ToInt64(price);
+
+                                    byte[] imageData = (byte[])reader["IMAGE"];
+                                    string base64Image = Convert.ToBase64String(imageData);
+                                    string imageUrl = "data:image/jpeg;base64," + base64Image;
+
+                                    string qr2 = "insert into cart (PRODUCT_ID,PRODUCT_NAME,PRICE,QUANTITY,IMAGE,USER_EMAIL) values(:id,:name,:price,:qn,:img,:em)";
+                                    OracleCommand cmd2 = new OracleCommand(qr2, con);
+                                    cmd2.Parameters.Add(":id", OracleDbType.Int32).Value = id;
+                                    cmd2.Parameters.Add(":name", OracleDbType.Varchar2).Value = productName;
+                                    cmd2.Parameters.Add(":price", OracleDbType.Int64).Value = price;
+                                    cmd2.Parameters.Add(":qn", OracleDbType.Int32).Value = pdctCount.InnerText;
+                                    cmd2.Parameters.Add(":img", OracleDbType.Blob).Value = imageData;
+                                    cmd2.Parameters.Add(":em", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
+                                    cmd2.ExecuteNonQuery();
+
+                                }
+                            }
+                            
+                            con.Close();
+                            Response.Redirect("Cart.aspx");
+                        }
+                    }
+                    else
+                    {
+                        error.Text = "Please Log in First";
+                    }
                 }
                 else
                 {
-                    string id = Request.QueryString["data"];
-                    con.Open();
-                    string qr = "select product_name,price,image from product where id='" + id + "'";
-                    OracleCommand cmd = new OracleCommand(qr, con);
-                    OracleDataReader reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        string productName, price;
-                        productName = reader["PRODUCT_NAME"].ToString();
-                        price = reader["PRICE"].ToString();
-                        //pr = Convert.ToInt64(price);
-
-                        byte[] imageData = (byte[])reader["IMAGE"];
-                        string base64Image = Convert.ToBase64String(imageData);
-                        string imageUrl = "data:image/jpeg;base64," + base64Image;
-
-                        string qr2 = "insert into cart (PRODUCT_ID,PRODUCT_NAME,PRICE,QUANTITY,IMAGE,USER_EMAIL) values(:id,:name,:price,:qn,:img,:em)";
-                        OracleCommand cmd2 = new OracleCommand(qr2, con);
-                        cmd2.Parameters.Add(":id", OracleDbType.Int32).Value = id;
-                        cmd2.Parameters.Add(":name", OracleDbType.Varchar2).Value = productName;
-                        cmd2.Parameters.Add(":price", OracleDbType.Int64).Value = price;
-                        cmd2.Parameters.Add(":qn", OracleDbType.Int32).Value = pdctCount.InnerText;
-                        cmd2.Parameters.Add(":img", OracleDbType.Blob).Value = imageData;
-                        cmd2.Parameters.Add(":em", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
-                        cmd2.ExecuteNonQuery();
-                        
-                    }
-                    con.Close();
-                    Response.Redirect("Cart.aspx");
+                    error.Text = "Please Log in First";
                 }
+
             }
             catch (Exception ex)
             {
@@ -209,6 +254,25 @@ namespace Ghuraghuri.pages
                 TextBox1.Text = "1";
             }
             
+        }
+
+        bool isItemAlreadyExist(string pid)
+        {
+            con.Open();
+            string qr = "select * from cart where PRODUCT_ID='" + pid + "' and USER_EMAIL='" + Session["u_email"].ToString() + "'";
+            OracleCommand cmd = new OracleCommand(qr, con);
+            OracleDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                string qr2 = "update cart set QUANTITY=:qn where PRODUCT_ID='" + pid + "' and USER_EMAIL='" + Session["u_email"].ToString() + "'";
+                OracleCommand cmd2 = new OracleCommand(qr2, con);
+                cmd2.Parameters.Add(":qn", OracleDbType.Int32).Value = pdctCount.InnerText;
+                cmd2.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            con.Close();
+            return false;
         }
     }
 }

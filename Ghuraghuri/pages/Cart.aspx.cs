@@ -43,8 +43,16 @@ namespace Ghuraghuri.pages
                     PopulateProductList();
                     
                 }
+                else
+                {
+                    error.Text = "Please Log In First";
+                }
             }
-                
+            else
+            {
+                error.Text = "Please Log In First";
+            }
+
 
         }
         void PopulateProductList()

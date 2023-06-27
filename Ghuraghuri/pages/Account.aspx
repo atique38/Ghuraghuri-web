@@ -24,6 +24,12 @@
                  </div>
                  <hr>
                  <div class="info">
+                     <p>Display<br /> Name</p>
+                    <p id="u_disName" runat="server">Atique</p>
+                    <i class='bx bxs-edit' id="disname_edt"></i>
+                 </div>
+                 <hr>
+                 <div class="info">
                      <p>Email</p>
                      <p id="u_email" runat="server">example@gmail.com</p>
                      <i class='bx bx-check' style="color:#08B38B"></i>
@@ -33,14 +39,14 @@
 
                  <div class="info">
                      <p>Phone</p>
-                     <p>None</p>
+                     <p id="u_phn" runat="server">None</p>
                      <i class='bx bxs-edit' id="phone_edt"></i>
                  </div>
                  <hr>
 
                  <div class="info">
                      <p>Gender</p>
-                     <p>Prefer not to say</p>
+                     <p id="u_gender" runat="server">Prefer not to say</p>
                      <i class='bx bxs-edit' id="gender_edt"></i>
                  </div>
                  <hr>
@@ -49,6 +55,8 @@
          </div>
      </section>
      <section class="change_pass" id="u_pass" runat="server">
+         <asp:Label ID="u_error" runat="server" Text="" ForeColor="Red"></asp:Label>
+         <asp:Label ID="u_done" runat="server" Text="" ForeColor="#08B38B"></asp:Label>
          <div class="container">
              <p class="heading">Password</p>
              <div class="content">
@@ -70,7 +78,7 @@
                       <asp:TextBox ID="TextBox2" runat="server" TextMode="Password" class="inp"></asp:TextBox>
                  </div>
                  <hr>
-                 <asp:Button ID="Button1" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="u_pass_update" runat="server" Text="Update" class="btn" OnClick="u_pass_update_Click"/>
              </div>
          </div>
      </section>
@@ -83,21 +91,21 @@
              <div class="content">
                  <div class="info">
                      <p>Agency</p>
-                    <p>example</p>
+                    <p id="agName" runat="server">example</p>
                     <i class='bx bxs-edit' id="agency_edt"></i>
                      
                  </div>
                  <hr>
                  <div class="info">
                      <p>Owner</p>
-                    <p>Atique Faisal</p>
+                    <p id="ownName" runat="server">Atique Faisal</p>
                     <i class='bx bxs-edit' id="owner_edt"></i>
                      
                  </div>
                  <hr>
                  <div class="info">
                      <p>Email</p>
-                     <p>example@gmail.com</p>
+                     <p id="agEmail" runat="server">example@gmail.com</p>
                      <i class='bx bx-check' style="color:#08B38B"></i>
                      
                  </div>
@@ -105,14 +113,14 @@
 
                  <div class="info">
                      <p>Phone</p>
-                     <p>None</p>
+                     <p id="ag_phn" runat="server">None</p>
                      <i class='bx bxs-edit' id="agency_phone_edt"></i>
                  </div>
                  <hr>
 
                  <div class="info">
                      <p>Address</p>
-                     <p>Pockategate,kuet,khulna</p>
+                     <p id="ag_adrs" runat="server">Pockategate,kuet,khulna</p>
                      <i class='bx bxs-edit' id="address_edt"></i>
                  </div>
                  <hr>
@@ -122,6 +130,8 @@
      </section>
 
      <section class="change_pass" id="ag_pass" runat="server">
+         <asp:Label ID="ag_error" runat="server" Text="" ForeColor="Red"></asp:Label>
+         <asp:Label ID="ag_done" runat="server" Text="" ForeColor="#08B38B"></asp:Label>
          <div class="container">
              <p class="heading">Password</p>
              <div class="content">
@@ -143,7 +153,7 @@
                       <asp:TextBox ID="TextBox6" runat="server" TextMode="Password" class="inp"></asp:TextBox>
                  </div>
                  <hr>
-                 <asp:Button ID="Button2" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="ag_pass_update" runat="server" Text="Update" class="btn" OnClick="ag_pass_update_Click"/>
              </div>
          </div>
      </section>
@@ -151,13 +161,13 @@
 
      <!--admin account-->
      <section class="basic_info" id="ad_info" runat="server">
+         
          <div class="container">
              <p class="heading">Basic Information</p>
              <div class="content">
                  <div class="info">
                      <p>Email</p>
-                     <p>example@gmail.com</p>
-                     <i class='bx bxs-edit'></i>
+                     <p id="ad_email" runat="server">example@gmail.com</p>
                      
                  </div>
                  <hr>
@@ -166,6 +176,7 @@
      </section>
 
      <section class="change_pass" id="ad_pass" runat="server">
+         <asp:Label ID="ad_error" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Password</p>
              <div class="content">
@@ -187,7 +198,7 @@
                       <asp:TextBox ID="TextBox9" runat="server" TextMode="Password" class="inp"></asp:TextBox>
                  </div>
                  <hr>
-                 <asp:Button ID="Button3" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="ad_update_pass" runat="server" Text="Update" class="btn" OnClick="ad_update_pass_Click"/>
              </div>
          </div>
      </section>
@@ -195,6 +206,7 @@
 
     <!--popup user name edit-->
     <section class="popup">
+        <asp:Label ID="uname_edt_error" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit Name</p>
              <i class='bx bx-x' id="name_close"></i>
@@ -205,12 +217,30 @@
                      
                  </div>
                  <hr>
-                 <asp:Button ID="Button4" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="U_NameEdt" runat="server" Text="Update" class="btn" OnClick="U_NameEdt_Click"/>
+             </div>
+         </div>
+     </section>
+
+    <section class="popup_display_name">
+        <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
+         <div class="container">
+             <p class="heading">Edit Display Name</p>
+             <i class='bx bx-x' id="disname_close"></i>
+             <div class="content">
+                 <div class="info">
+                     <p runat="server" class="lb">Name</p>
+                     <asp:TextBox ID="TextBox16" runat="server"  class="inp"></asp:TextBox>
+                     
+                 </div>
+                 <hr>
+                 <asp:Button ID="DisnameEdt" runat="server" Text="Update" class="btn" OnClick="DisnameEdt_Click"/>
              </div>
          </div>
      </section>
     <!--popup user phone edit-->
     <section class="popup_phone">
+        <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit phone number</p>
              <i class='bx bx-x' id="phone_close"></i>
@@ -221,12 +251,13 @@
  
                  </div>
                  <hr>
-                 <asp:Button ID="Button5" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="U_phn_edt" runat="server" Text="Update" class="btn" OnClick="U_phn_edt_Click"/>
              </div>
          </div>
      </section>
      <!--popup user gender edit-->
     <section class="popup_gender">
+        <asp:Label ID="Label3" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit Gender</p>
              <i class='bx bx-x' id="gender_close"></i>
@@ -240,7 +271,7 @@
                      </asp:RadioButtonList>
                  </div>
                  <hr>
-                 <asp:Button ID="Button6" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="GenderEdt" runat="server" Text="Update" class="btn" OnClick="GenderEdt_Click"/>
              </div>
          </div>
      </section>
@@ -248,6 +279,7 @@
 
     <!--popup agency name edit-->
     <section class="popup_agency">
+        <asp:Label ID="Label4" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit Agency Name</p>
              <i class='bx bx-x' id="agency_close"></i>
@@ -258,12 +290,13 @@
                      
                  </div>
                  <hr>
-                 <asp:Button ID="Button7" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="ag_name_edt" runat="server" Text="Update" class="btn" OnClick="ag_name_edt_Click"/>
              </div>
          </div>
      </section>
-     <!--popup agency name edit-->
+     <!--popup owner name edit-->
     <section class="popup_owner">
+        <asp:Label ID="Label5" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit Owner Name</p>
              <i class='bx bx-x' id="owner_close"></i>
@@ -274,12 +307,13 @@
                      
                  </div>
                  <hr>
-                 <asp:Button ID="Button8" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="ag_ownername_edt" runat="server" Text="Update" class="btn" OnClick="ag_ownername_edt_Click"/>
              </div>
          </div>
      </section>
     <!--popup agency phone edit-->
     <section class="popup_agency_phone">
+        <asp:Label ID="Label6" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit phone number</p>
              <i class='bx bx-x' id="agency_phone_close"></i>
@@ -290,12 +324,13 @@
  
                  </div>
                  <hr>
-                 <asp:Button ID="Button9" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="ag_phn_edt" runat="server" Text="Update" class="btn" OnClick="ag_phn_edt_Click"/>
              </div>
          </div>
      </section>
     <!--popup agency address edit-->
     <section class="popup_address">
+         <asp:Label ID="Label7" runat="server" Text="" ForeColor="Red"></asp:Label>
          <div class="container">
              <p class="heading">Edit Address</p>
              <i class='bx bx-x' id="address_close"></i>
@@ -306,7 +341,7 @@
  
                  </div>
                  <hr>
-                 <asp:Button ID="Button10" runat="server" Text="Update" class="btn"/>
+                 <asp:Button ID="ag_adrs_edt" runat="server" Text="Update" class="btn" OnClick="ag_adrs_edt_Click"/>
              </div>
          </div>
      </section>

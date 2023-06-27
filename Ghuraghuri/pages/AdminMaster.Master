@@ -111,7 +111,7 @@
 			<h3 runat="server" id="Menu_item">Dashboard</h3>
 			<h4 id="UserTxt" runat="server">Admin</h4>
 			<a href="#" class="profile">
-				<img src="../images/tourism.png">
+				<img src="../images/profile.png" id="navImg" runat="server">
 			</a>
 		</nav>
 		<!-- NAVBAR -->

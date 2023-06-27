@@ -50,6 +50,7 @@ G:\web\Ghuraghuri\Ghuraghuri\bin\roslyn\vbc.exe.config
 G:\web\Ghuraghuri\Ghuraghuri\bin\roslyn\vbc.rsp
 G:\web\Ghuraghuri\Ghuraghuri\bin\roslyn\VBCSCompiler.exe
 G:\web\Ghuraghuri\Ghuraghuri\bin\roslyn\VBCSCompiler.exe.config
+G:\web\Ghuraghuri\Ghuraghuri\bin\HtmlAgilityPack.dll
 G:\web\Ghuraghuri\Ghuraghuri\bin\Microsoft.Bcl.AsyncInterfaces.dll
 G:\web\Ghuraghuri\Ghuraghuri\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 G:\web\Ghuraghuri\Ghuraghuri\bin\Oracle.ManagedDataAccess.dll
@@ -61,6 +62,8 @@ G:\web\Ghuraghuri\Ghuraghuri\bin\System.Text.Encodings.Web.dll
 G:\web\Ghuraghuri\Ghuraghuri\bin\System.Text.Json.dll
 G:\web\Ghuraghuri\Ghuraghuri\bin\System.Threading.Tasks.Extensions.dll
 G:\web\Ghuraghuri\Ghuraghuri\bin\System.ValueTuple.dll
+G:\web\Ghuraghuri\Ghuraghuri\bin\HtmlAgilityPack.pdb
+G:\web\Ghuraghuri\Ghuraghuri\bin\HtmlAgilityPack.xml
 G:\web\Ghuraghuri\Ghuraghuri\bin\Microsoft.Bcl.AsyncInterfaces.xml
 G:\web\Ghuraghuri\Ghuraghuri\bin\System.Buffers.xml
 G:\web\Ghuraghuri\Ghuraghuri\bin\System.Memory.xml
@@ -76,6 +79,5 @@ G:\web\Ghuraghuri\Ghuraghuri\obj\Debug\Ghuraghuri.csproj.CoreCompileInputs.cache
 G:\web\Ghuraghuri\Ghuraghuri\obj\Debug\Ghuraghuri.csproj.CopyComplete
 G:\web\Ghuraghuri\Ghuraghuri\obj\Debug\Ghuraghuri.dll
 G:\web\Ghuraghuri\Ghuraghuri\obj\Debug\Ghuraghuri.pdb
-G:\web\Ghuraghuri\Ghuraghuri\bin\HtmlAgilityPack.dll
-G:\web\Ghuraghuri\Ghuraghuri\bin\HtmlAgilityPack.pdb
-G:\web\Ghuraghuri\Ghuraghuri\bin\HtmlAgilityPack.xml
+G:\web\Ghuraghuri\Ghuraghuri\bin\BCrypt.Net.dll
+G:\web\Ghuraghuri\Ghuraghuri\bin\BCrypt.Net.xml

@@ -51,6 +51,15 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl U_Name;
 
         /// <summary>
+        /// u_disName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl u_disName;
+
+        /// <summary>
         /// u_email control.
         /// </summary>
         /// <remarks>
@@ -60,6 +69,24 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl u_email;
 
         /// <summary>
+        /// u_phn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl u_phn;
+
+        /// <summary>
+        /// u_gender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl u_gender;
+
+        /// <summary>
         /// u_pass control.
         /// </summary>
         /// <remarks>
@@ -67,6 +94,24 @@ namespace Ghuraghuri.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl u_pass;
+
+        /// <summary>
+        /// u_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label u_error;
+
+        /// <summary>
+        /// u_done control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label u_done;
 
         /// <summary>
         /// TextBox3 control.
@@ -96,13 +141,13 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
 
         /// <summary>
-        /// Button1 control.
+        /// u_pass_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button u_pass_update;
 
         /// <summary>
         /// ag_info control.
@@ -114,6 +159,51 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ag_info;
 
         /// <summary>
+        /// agName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl agName;
+
+        /// <summary>
+        /// ownName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ownName;
+
+        /// <summary>
+        /// agEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl agEmail;
+
+        /// <summary>
+        /// ag_phn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ag_phn;
+
+        /// <summary>
+        /// ag_adrs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ag_adrs;
+
+        /// <summary>
         /// ag_pass control.
         /// </summary>
         /// <remarks>
@@ -121,6 +211,24 @@ namespace Ghuraghuri.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ag_pass;
+
+        /// <summary>
+        /// ag_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ag_error;
+
+        /// <summary>
+        /// ag_done control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ag_done;
 
         /// <summary>
         /// TextBox4 control.
@@ -150,13 +258,13 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox6;
 
         /// <summary>
-        /// Button2 control.
+        /// ag_pass_update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button ag_pass_update;
 
         /// <summary>
         /// ad_info control.
@@ -168,6 +276,15 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ad_info;
 
         /// <summary>
+        /// ad_email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ad_email;
+
+        /// <summary>
         /// ad_pass control.
         /// </summary>
         /// <remarks>
@@ -175,6 +292,15 @@ namespace Ghuraghuri.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ad_pass;
+
+        /// <summary>
+        /// ad_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ad_error;
 
         /// <summary>
         /// TextBox7 control.
@@ -204,13 +330,22 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox9;
 
         /// <summary>
-        /// Button3 control.
+        /// ad_update_pass control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button ad_update_pass;
+
+        /// <summary>
+        /// uname_edt_error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label uname_edt_error;
 
         /// <summary>
         /// TextBox10 control.
@@ -222,13 +357,49 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox10;
 
         /// <summary>
-        /// Button4 control.
+        /// U_NameEdt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button U_NameEdt;
+
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// TextBox16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+
+        /// <summary>
+        /// DisnameEdt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DisnameEdt;
+
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// TextBox11 control.
@@ -240,13 +411,22 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox11;
 
         /// <summary>
-        /// Button5 control.
+        /// U_phn_edt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button U_phn_edt;
+
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
         /// RadioButtonList1 control.
@@ -258,13 +438,22 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
 
         /// <summary>
-        /// Button6 control.
+        /// GenderEdt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
+        protected global::System.Web.UI.WebControls.Button GenderEdt;
+
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
         /// TextBox12 control.
@@ -276,13 +465,22 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox12;
 
         /// <summary>
-        /// Button7 control.
+        /// ag_name_edt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button ag_name_edt;
+
+        /// <summary>
+        /// Label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
         /// TextBox13 control.
@@ -294,13 +492,22 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox13;
 
         /// <summary>
-        /// Button8 control.
+        /// ag_ownername_edt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.Button ag_ownername_edt;
+
+        /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
         /// TextBox14 control.
@@ -312,13 +519,22 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox14;
 
         /// <summary>
-        /// Button9 control.
+        /// ag_phn_edt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.WebControls.Button ag_phn_edt;
+
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
         /// TextBox15 control.
@@ -330,12 +546,12 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox TextBox15;
 
         /// <summary>
-        /// Button10 control.
+        /// ag_adrs_edt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button10;
+        protected global::System.Web.UI.WebControls.Button ag_adrs_edt;
     }
 }

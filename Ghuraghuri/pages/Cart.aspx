@@ -13,9 +13,9 @@
                 </asp:Table>
                 <div style="display:flex;justify-content:end;margin:1rem">
                     <h3>Total: </h3>
-                    <h3 id="totalCost" runat="server">1000</h3>
+                    <h3 id="totalCost" runat="server">0</h3>
                 </div>
-                <asp:Button ID="PlaceOrder" runat="server" Text="Place Order" class="btn" OnClick="PlaceOrder_Click"/>
+                <asp:Button ID="PlaceOrder" runat="server" Text="Place Order"  OnClick="PlaceOrder_Click" Enabled="false" CssClass="disabled"/>
             </section>
            
         </ContentTemplate>

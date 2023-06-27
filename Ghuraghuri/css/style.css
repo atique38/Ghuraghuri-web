@@ -55,11 +55,12 @@ i {
 }
 .inp {
     width: 30rem;
-    background: #b9b9b9;
+    background:#77fec3;
     border: none;
-    outline:none;
-    height:2rem;
-    border-radius:.5rem;
+    outline: none;
+    height: 2rem;
+    border-radius: .5rem;
+    padding:.5rem;
 }
     .inp:focus {
         background:#acfcd9;
@@ -81,7 +82,7 @@ i {
     }
 
 .popup, .popup_phone, .popup_gender,
-.popup_agency, .popup_owner, .popup_agency_phone, .popup_address {
+.popup_agency, .popup_owner, .popup_agency_phone, .popup_address, .popup_display_name {
     position: absolute;
     left: 25%;
     background: #ffffff;
@@ -93,14 +94,14 @@ i {
     transition: opacity 300ms ease-in-out, top 1000ms ease-in-out, transform 300ms ease-in-out;
 }
     .popup.open, .popup_phone.open, .popup_gender.open,
-    .popup_agency.open, .popup_owner.open, .popup_agency_phone.open, .popup_address.open {
+    .popup_agency.open, .popup_owner.open, .popup_agency_phone.open, .popup_address.open, .popup_display_name.open {
         opacity: 1;
         top: 50%;
         transform: translate(-10%,-25%) scale(1);
         transition: transform 300ms cubic-bezier(0.18,0.89.0.43,1.19);
     }
     .popup .inp, .popup_phone .inp,
-    .popup_agency .inp, .popup_owner .inp, .popup_agency_phone .inp{
+    .popup_agency .inp, .popup_owner .inp, .popup_agency_phone .inp, .popup_display_name .inp{
         width: 20rem;
     }
     .popup_address .adrs {
@@ -112,7 +113,8 @@ i {
     .popup_agency .container i,
     .popup_owner .container i,
     .popup_agency_phone .container i,
-    .popup_address .container i {
+    .popup_address .container i,
+    .popup_display_name i{
         position: absolute;
         right: .5rem;
         top: .5rem;

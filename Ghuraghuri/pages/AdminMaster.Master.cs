@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,6 +13,7 @@ namespace Ghuraghuri.pages
 {
     public partial class test : System.Web.UI.MasterPage
     {
+        OracleConnection con = new OracleConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -102,6 +106,7 @@ namespace Ghuraghuri.pages
                 List12.Visible = true;
             }
             UserTxt.InnerText= name;
+            setImage();
         }
 
       
@@ -163,6 +168,34 @@ namespace Ghuraghuri.pages
         {
             Session["click"] = "order_hist";
             Response.Redirect("OrderHistory.aspx");
+        }
+
+        void setImage()
+        {
+            con.Open();
+            string sql = "SELECT PROFILE_IMAGE FROM user_info where email=:em";
+            OracleCommand cmd = new OracleCommand(sql, con);
+
+            cmd.Parameters.Add(":em", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
+            OracleDataReader reader = cmd.ExecuteReader();
+
+            if(reader.Read())
+            {
+                if (!reader.IsDBNull(reader.GetOrdinal("PROFILE_IMAGE")))
+                {
+                    byte[] imageData = (byte[])reader["PROFILE_IMAGE"];
+                    string base64Image = Convert.ToBase64String(imageData);
+                    string imageUrl = "data:image/jpeg;base64," + base64Image;
+                    //ClientScript.RegisterStartupScript(this.GetType(), "image", "setImage('" + imageUrl + "');", true);
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "image2", "setNavImage('" + imageUrl + "');", true);
+                    navImg.Attributes["src"] = imageUrl;
+                }
+                else
+                {
+                    navImg.Attributes["src"] = "../images/profile.png";
+                }
+            }
+            con.Close();
         }
     }
 }

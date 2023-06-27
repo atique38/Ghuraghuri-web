@@ -42,28 +42,36 @@
        
 
     </div>
-         <div class="right">
-            <h3 style="font-size:1.25rem">Cost:<span style="color: #DC7303" id="pack_price" runat="server">5000tk</span></h3>
-             <small style="color:black" id="tour_duration" runat="server">Duration</small>
-            <h3>Select Date and Travelers</h3>
-            
-             <asp:LinkButton ID="LinkButton1" runat="server" class="date" Width="100%" ForeColor="Black" OnClick="LinkButton1_Click">
-                  <i class="fa-solid fa-calendar-days"></i>
-                  <span id="selected_date" runat="server">24 May, 2023</span>
-             </asp:LinkButton>
-             <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender" OnSelectionChanged="Calendar1_SelectionChanged" BackColor="White" TitleStyle-BackColor="#99FFCC" TitleStyle-Font-Bold="true" class="calender" SelectedDayStyle-BackColor="#00FF99"></asp:Calendar>
-       
-              <asp:LinkButton ID="LinkButton2" runat="server" class="date" Width="100%" ForeColor="Black" OnClick="LinkButton2_Click">
-                  <i class="fa-solid fa-user"></i>
-                  <span id="touristNum" runat="server">2 person</span>
-             </asp:LinkButton>
-             <asp:Panel ID="Panel1" runat="server" class="person">
-                 <small style="color:#808080;font-weight:bold">You can select up to 15 tourist</small>
-                 <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Text="2" class="inp"></asp:TextBox>
-                 <asp:Button ID="ApplyBtn" runat="server" Text="Apply" class="btn" OnClick="ApplyBtn_Click" />
-             </asp:Panel>
-             <asp:Button ID="BookBtn" runat="server" Text="Book Now" class="btn" />
-         </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div class="right">
+                    <asp:Label ID="error" runat="server" Text="" ForeColor="Red"></asp:Label>
+                    <asp:Label ID="done" runat="server" Text="" ForeColor="#08B38B"></asp:Label>
+                    <h3 style="font-size: 1.25rem">Cost:<span style="color: #DC7303" id="pack_price" runat="server">5000tk</span></h3>
+                    <small style="color: black" id="tour_duration" runat="server">Duration</small>
+                    <h3>Select Date and Travelers</h3>
+
+                    <asp:LinkButton ID="LinkButton1" runat="server" class="date" Width="100%" ForeColor="Black" OnClick="LinkButton1_Click">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span id="selected_date" runat="server">Select Date</span>
+                    </asp:LinkButton>
+                    <asp:Calendar ID="Calendar1" runat="server" OnDayRender="Calendar1_DayRender" OnSelectionChanged="Calendar1_SelectionChanged" BackColor="White" TitleStyle-BackColor="#99FFCC" TitleStyle-Font-Bold="true" class="calender" SelectedDayStyle-BackColor="#00FF99"></asp:Calendar>
+
+                    <asp:LinkButton ID="LinkButton2" runat="server" class="date" Width="100%" ForeColor="Black" OnClick="LinkButton2_Click">
+                        <i class="fa-solid fa-user"></i>
+                        <span id="touristNum" runat="server">Total Persons</span>
+                    </asp:LinkButton>
+                    <asp:Panel ID="Panel1" runat="server" class="person">
+                        <small style="color: #808080; font-weight: bold">You can select up to 15 tourist</small>
+                        <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Text="2" class="inp" OnTextChanged="TextBox1_TextChanged" AutoPostBack="true"></asp:TextBox>
+                        <asp:Button ID="ApplyBtn" runat="server" Text="Apply" class="btn" OnClick="ApplyBtn_Click" />
+                    </asp:Panel>
+                    <asp:Button ID="BookBtn" runat="server" Text="Book Now" class="btn" OnClick="BookBtn_Click"/>
+                </div>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+         
     </section>
    
 

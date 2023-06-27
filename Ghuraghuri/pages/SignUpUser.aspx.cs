@@ -104,7 +104,7 @@ namespace Ghuraghuri.pages
         {
             con.Open();
 
-            string qr = "insert into user_info (name,email,password,displayname,phone_no) values(:1, :2, :3, :4, :5)";
+            string qr = "insert into user_info (name,email,password,displayname,phone_no,gender) values(:1, :2, :3, :4, :5,:6)";
             OracleCommand cmd = new OracleCommand(qr, con);
             OracleParameter name = new OracleParameter();
             name.OracleDbType = OracleDbType.Varchar2;
@@ -116,7 +116,9 @@ namespace Ghuraghuri.pages
 
             OracleParameter pass = new OracleParameter();
             pass.OracleDbType = OracleDbType.Varchar2;
-            pass.Value = u_pass.Value.ToString().Trim();
+
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(u_pass.Value.Trim());
+            pass.Value = hashedPassword;
 
             OracleParameter dis_name = new OracleParameter();
             dis_name.OracleDbType = OracleDbType.Varchar2;
@@ -126,11 +128,16 @@ namespace Ghuraghuri.pages
             phone.OracleDbType = OracleDbType.Varchar2;
             phone.Value = Phone.Value.ToString().Trim();
 
+            OracleParameter gender = new OracleParameter();
+            gender.OracleDbType = OracleDbType.Varchar2;
+            gender.Value = "Prefer not to say";
+
             cmd.Parameters.Add(name);
             cmd.Parameters.Add(email);
             cmd.Parameters.Add(pass);
             cmd.Parameters.Add(dis_name);
             cmd.Parameters.Add(phone);
+            cmd.Parameters.Add(gender);
 
             int x = cmd.ExecuteNonQuery();
             if (x>0)
