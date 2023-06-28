@@ -64,6 +64,18 @@ namespace Ghuraghuri.pages
                 List1.Attributes.Remove("class");
                 Menu_item.InnerText = "Order History";
             }
+            else if (Session["click"] != null && Session["click"].Equals("bookings"))
+            {
+                List12.Attributes.Add("class", "active");
+                List1.Attributes.Remove("class");
+                Menu_item.InnerText = "Bookings";
+            }
+            else if (Session["click"] != null && Session["click"].Equals("orders"))
+            {
+                List4.Attributes.Add("class", "active");
+                List1.Attributes.Remove("class");
+                Menu_item.InnerText = "Orders";
+            }
 
 
             //navbar info
@@ -196,6 +208,18 @@ namespace Ghuraghuri.pages
                 }
             }
             con.Close();
+        }
+
+        protected void bokings_ServerClick(object sender, EventArgs e)
+        {
+            Session["click"] = "bookings";
+            Response.Redirect("Bookings.aspx");
+        }
+
+        protected void orders_ServerClick(object sender, EventArgs e)
+        {
+            Session["click"] = "orders";
+            Response.Redirect("Orders.aspx");
         }
     }
 }

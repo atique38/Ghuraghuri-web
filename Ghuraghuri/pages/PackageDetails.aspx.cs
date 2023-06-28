@@ -43,6 +43,8 @@ namespace Ghuraghuri.pages
                     string details = reader["description"].ToString();
                     string rating = reader["ratings"].ToString();
 
+                    Constant.email = agency;
+
                     pckName = name;
                     string query = "SELECT agency_name FROM agency_info where email='" + agency + "'";
                     OracleCommand command = new OracleCommand(query, con);
@@ -182,7 +184,7 @@ namespace Ghuraghuri.pages
             {
                 string id = Request.QueryString["data"];
                 con.Open();
-                string qr = "insert into booking values(:t_id,:umail,:jrdate,:bkdate,:tourist_no,:pr,:st,:name)";
+                string qr = "insert into booking values(:t_id,:umail,:jrdate,:bkdate,:tourist_no,:pr,:st,:name,:ag_email)";
                 OracleCommand cmd=new OracleCommand(qr,con);
                 cmd.Parameters.Add(":t_id", OracleDbType.Int32).Value =Convert.ToInt32(id);
                 cmd.Parameters.Add(":umail", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
@@ -192,6 +194,7 @@ namespace Ghuraghuri.pages
                 cmd.Parameters.Add(":pr", OracleDbType.Int64).Value =Convert.ToInt64(pack_price.InnerText.Replace("tk",""));
                 cmd.Parameters.Add(":st", OracleDbType.Varchar2).Value = "Pending";
                 cmd.Parameters.Add(":name", OracleDbType.Varchar2).Value = pckName;
+                cmd.Parameters.Add(":ag_email", OracleDbType.Varchar2).Value = Constant.email;
                 int x=cmd.ExecuteNonQuery();
 
                 if(x > 0)

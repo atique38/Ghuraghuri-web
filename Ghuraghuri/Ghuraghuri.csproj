@@ -190,6 +190,8 @@
     <Content Include="pages\Cart.aspx" />
     <Content Include="pages\DeliveryInfo.aspx" />
     <Content Include="pages\OrderHistory.aspx" />
+    <Content Include="pages\Bookings.aspx" />
+    <Content Include="pages\Orders.aspx" />
     <Content Include="scripts\tinymce\icons\default\icons.js" />
     <Content Include="scripts\tinymce\icons\default\icons.min.js" />
     <Content Include="scripts\tinymce\license.txt" />
@@ -542,6 +544,20 @@
     </Compile>
     <Compile Include="pages\OrderHistory.aspx.designer.cs">
       <DependentUpon>OrderHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Bookings.aspx.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Bookings.aspx.designer.cs">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestGrigview.aspx.cs">

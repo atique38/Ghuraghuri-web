@@ -41,6 +41,7 @@ namespace Ghuraghuri.pages
                 cmd.Parameters.Add(":u_email", OracleDbType.Varchar2).Value = Session["u_email"].ToString();
                 OracleDataReader reader = cmd.ExecuteReader();
 
+                int cnt = 0;
                 while (reader.Read()) 
                 {
                     string productName = reader["PRODUCT_NAME"].ToString();
@@ -63,12 +64,22 @@ namespace Ghuraghuri.pages
                     //, :uname, :pdid, :pdname, :qn, :price, :date, :status
 
                     cmd2.ExecuteNonQuery();
+                    cnt++;
 
                 }
-                string qr3 = "insert into delivery_info values('" + Session["u_email"].ToString() + "','" + address + "','" + phone + "','" + method + "')";
-                OracleCommand cmd3= new OracleCommand(qr3, con);
-                cmd3.ExecuteNonQuery();
-                if(!(bool)Session["buyBtn"])
+
+                string sql = "select id from (select * from user_order order by id desc) WHERE ROWNUM = 1";
+                OracleCommand command = new OracleCommand(sql, con);
+                int ord_id = Convert.ToInt32(command.ExecuteScalar());
+                for(int i=cnt;i>0;i--)
+                {
+                    string qr3 = "insert into delivery_info values('" + Session["u_email"].ToString() + "','" + address + "','" + phone + "','" + method + "','"+ord_id+"')";
+                    OracleCommand cmd3 = new OracleCommand(qr3, con);
+                    cmd3.ExecuteNonQuery();
+                    ord_id--;
+                }
+                
+                if (Session["buyBtn"]!=null && !(bool)Session["buyBtn"])
                 {
                     string qr4 = "delete from cart where user_email='" + Session["u_email"].ToString() + "'";
                     OracleCommand cmd4 = new OracleCommand(qr4, con);
@@ -83,6 +94,7 @@ namespace Ghuraghuri.pages
                
                 con.Close();
                 Session["buyBtn"] = false;
+                Session["click"] = "order_hist";
                 Response.Redirect("OrderHistory.aspx");
             }
             catch(Exception ex)

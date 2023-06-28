@@ -8,5 +8,6 @@ namespace Ghuraghuri
     public class Constant
     {
         public static bool clicked=true;
+        public static string email ="";
     }
 }

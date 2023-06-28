@@ -18,18 +18,29 @@
     //counter("count3", 0, 40, 3000);
 });*/
 
-function counter(id, start, end, duration) {
+function counter(id, end, duration, inc) {
     let obj = document.getElementById(id),
-        current = start,
-        range = end - start,
-        increment = end > start ? 1 : -1,
+    
+        current = 0,
+        range = end - 0,
+        increment = inc,
         step = Math.abs(Math.floor(duration / range)),
         timer = setInterval(() => {
-            current += increment;
-            obj.textContent = current;
+
+            if (current > end) {
+                obj.textContent = end;
+                clearInterval(timer);
+            }
+            else {
+                obj.textContent = current;
+            }
+            
             if (current == end) {
                 clearInterval(timer);
             }
+            current += increment;
         }, step);
+    
+        
 }
 

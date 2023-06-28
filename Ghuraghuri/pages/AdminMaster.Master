@@ -40,14 +40,14 @@
 				</a>
 			</li>
 			<li id="List12" runat="server">
-				<a id="A1" runat="server" onserverclick="History_ServerClick">
-					<i class='bx bx-history'></i>
+				<a id="bokings" runat="server" onserverclick="bokings_ServerClick">
+					<i class='bx bxs-receipt'></i>
 					<span class="text">Bookings</span>
 				</a>
 			</li>
 			
 			<li id="List4" runat="server">
-				<a href="#">
+				<a id="orders" runat="server" onserverclick="orders_ServerClick">
 					<i class='bx bxs-shopping-bag'></i>
 					<span class="text">Orders</span>
 				</a>
@@ -58,7 +58,7 @@
 					<span class="text">Order History</span>
 				</a>
 			</li>
-			<li id="List5" runat="server">
+			<li id="List5" runat="server" visible="false">
 				<a href="#">
 					<i class='bx bxs-comment-dots'></i>
 					<span class="text">Reviews</span>

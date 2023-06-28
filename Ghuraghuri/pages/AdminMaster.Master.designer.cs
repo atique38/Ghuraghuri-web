@@ -87,13 +87,13 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl List12;
 
         /// <summary>
-        /// A1 control.
+        /// bokings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor A1;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor bokings;
 
         /// <summary>
         /// List4 control.
@@ -103,6 +103,15 @@ namespace Ghuraghuri.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl List4;
+
+        /// <summary>
+        /// orders control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor orders;
 
         /// <summary>
         /// List11 control.
