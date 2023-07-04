@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="SpotDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm10" %>
+﻿<%@ Page Title="Spot Details" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="SpotDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm10" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>-->
     <link href="../css/swipper1.css" rel="stylesheet" />
@@ -10,31 +10,16 @@
 
     <section class="gallery">
         <div class="swiper mySwiper">
-    <div class="swiper-wrapper" id="div_container" runat="server">
-      
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-      </div>
-      
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-      </div>
-     
-    </div>
-    
-  </div>
+            <div class="swiper-wrapper" id="div_container" runat="server">
+
+               <%-- <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                </div>--%>
+                
+
+            </div>
+
+        </div>
 
     </section>
 

@@ -188,7 +188,7 @@ namespace Ghuraghuri.pages
             try
             {
                 con.Open();
-                string qr = "select * from tour";
+                string qr = "select * from tour order by ratings desc";
                 OracleCommand cmd = new OracleCommand(qr, con);
                 OracleDataReader reader = cmd.ExecuteReader();
 
@@ -301,7 +301,7 @@ namespace Ghuraghuri.pages
             try
             {
                 con.Open();
-                string qr = "select * from product";
+                string qr = "select * from product order by ratings desc";
                 OracleCommand cmd = new OracleCommand(qr, con);
                 OracleDataReader reader = cmd.ExecuteReader();
 

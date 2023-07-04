@@ -9,5 +9,6 @@ namespace Ghuraghuri
     {
         public static bool clicked=true;
         public static string email ="";
+        public static int quantity = 0;
     }
 }

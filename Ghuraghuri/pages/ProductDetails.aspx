@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="ProductDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm14" %>
+﻿<%@ Page Title="Product Details" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="ProductDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm14" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>-->
     <link href="../css/swipper1.css" rel="stylesheet" />
@@ -39,7 +39,7 @@
                         <span id="pdctCount" runat="server">Select Quantity</span>
                     </asp:LinkButton>
                     <asp:Panel ID="Panel1" runat="server" class="person" Visible="false">
-                        <small style="color: #808080; font-weight: bold">10 Products are available</small>
+                        <small style="color: #808080; font-weight: bold" id="pd_quantity" runat="server">10 Products are available</small>
                         <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Text="1" class="inp" OnTextChanged="TextBox1_TextChanged" AutoPostBack="true"></asp:TextBox>
                         <asp:Button ID="ApplyBtn" runat="server" Text="Apply" class="btn" OnClick="ApplyBtn_Click" />
                     </asp:Panel>

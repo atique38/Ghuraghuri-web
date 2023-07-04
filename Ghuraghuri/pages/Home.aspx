@@ -13,8 +13,8 @@
                 <div class="swiper-slide">
                    <div class="box" style="background: url(/images/bg-1.jpg) no-repeat;">
                      <div class="content">
-                        <span>Make your tour</span>
-                        <h3>Easy</h3>
+                        <span>Everything<br /> About Tour At</span>
+                        <h3>One Place</h3>
                         <a id="started_btn1" href="SignupOption.aspx" class="btn" runat="server">Get started</a>
                      </div>
                    </div>
@@ -49,74 +49,28 @@
     </section>
 
     <section class="t_spot" id="t_spot">
-      <h1 class="heading">Toutist Spots</h1>
+        <h1 class="heading">Toutist Spots</h1>
         <div class="swiper t_spot-slider">
-          <div class="swiper-wrapper" runat="server" id="div_container">
+            <div class="swiper-wrapper" runat="server" id="div_container">
 
-            <div class="swiper-slide t_slide">
+                <%--<div class="swiper-slide t_slide">
 
-              <div class="image">
-                <img src="/images/sundarban.jpg" alt="">
-              </div>
-              <div class="content">
-                <h3>Spot Name</h3>
-                <p>Forest</p>
-              </div>
+                    <div class="image">
+                        <img src="/images/sundarban.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Spot Name</h3>
+                        <p>Forest</p>
+                    </div>
+
+                </div>--%>
+
+               
+
 
             </div>
-
-            <div class="swiper-slide t_slide">
-
-              <div class="image">
-                <img src="/images/hill.jpg" alt="">
-              </div>
-              <div class="content">
-                <h3>Spot Name</h3>
-                <p>Hill</p>
-              </div>
-
-            </div>
-
-            <div class="swiper-slide t_slide">
-
-              <div class="image">
-                <img src="/images/sundarban.jpg" alt="">
-              </div>
-              <div class="content">
-                <h3>Spot Name</h3>
-                <p>Forest</p>
-              </div>
-
-            </div>
-
-            <div class="swiper-slide t_slide">
-
-              <div class="image">
-                <img src="/images/hill.jpg" alt="">
-              </div>
-              <div class="content">
-                <h3>Spot Name</h3>
-                <p>Hill</p>
-              </div>
-
-            </div>
-
-            <div class="swiper-slide t_slide">
-
-              <div class="image">
-                <img src="/images/sundarban.jpg" alt="">
-              </div>
-              <div class="content">
-                <h3>Spot Name</h3>
-                <p>Forest</p>
-              </div>
-
-            </div>
-
-
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
 
     </section>
@@ -129,398 +83,137 @@
           <img src="/images/cycling.jpg" alt="">
           <h3>Cycling</h3>
           <p>Some sights must be taken in slowly: rock formations shaped over thousands of...</p>
-          <a href="#" class="read_btn">Read More</a>
+          <a href="https://www.lifecycleadventures.com/blog/" class="read_btn">Read More</a>
         </div>
 
         <div class="box">
           <img src="/images/camping.jpg" alt="">
           <h3>Camping</h3>
           <p>Picture dense woods of pines, trickling waterfalls, slipping into...</p>
-          <a href="#" class="read_btn">Read More</a>
+          <a href="https://en.wikipedia.org/wiki/Camping" class="read_btn">Read More</a>
         </div>
 
         <div class="box">
           <img src="/images/kayak.jpg" alt="">
           <h3>Kayaking</h3>
           <p>You could zoom down a mountain river gorge as white-water mist pummels...</p>
-          <a href="#" class="read_btn">Read More</a>
+          <a href="https://blog.decathlon.in/articles/what-is-kayaking" class="read_btn">Read More</a>
         </div>
 
         <div class="box">
           <img src="/images/parasailing.jpg" alt="">
           <h3>Parasailing</h3>
           <p>Do you ever dream of flying -- making lazy circles in the sky like a seagull or...</p>
-          <a href="#" class="read_btn">Read More</a>
+          <a href="https://en.wikipedia.org/wiki/Parasailing" class="read_btn">Read More</a>
         </div>
 
         <div class="box">
           <img src="/images/zipline.jpg" alt="">
           <h3>Zip line</h3>
           <p>A zip line is, at its most simple, a cable that starts at a higher point than it ends...</p>
-          <a href="#" class="read_btn">Read More</a>
+          <a href="https://en.wikipedia.org/wiki/Zip_line" class="read_btn">Read More</a>
         </div>
 
       </div>
     </section>
 
-     
-
     <section class="package" id="package">
-      <h1 class="heading">Popular Packages</h1>
-      
-      <div class="swiper box_container-slider">
-          <div class="swiper-wrapper" id="package_container" runat="server">
-              <div class="swiper-slide box">
-                  <div class="image">
-                      <img src="/images/sea-beach.jpg" alt="">
-                  </div>
-                  <div class="content">
+        <h1 class="heading">Popular Packages</h1>
 
-                      <div class="agency">
-                          <i class="fa-solid fa-building"></i>
-                          <p>Agency Name</p>
-                      </div>
+        <div class="swiper box_container-slider">
+            <div class="swiper-wrapper" id="package_container" runat="server">
+                <%--<div class="swiper-slide box">
+                    <div class="image">
+                        <img src="/images/sea-beach.jpg" alt="">
+                    </div>
+                    <div class="content">
 
-                      <h4>Package Name</h4>
-                      <p>3 days,4 night</p>
+                        <div class="agency">
+                            <i class="fa-solid fa-building"></i>
+                            <p>Agency Name</p>
+                        </div>
 
-                      <div class="price_rating">
-                          <div class="rate">
-                              <i class="fa-solid fa-star"></i>
-                              <p style="color: #DC7303;">4.5</p>
-                          </div>
-                          <p class="amount">5000tk</p>
-                      </div>
+                        <h4>Package Name</h4>
+                        <p>3 days,4 night</p>
 
-                      <a class="explore_btn">Explore Now</a>
+                        <div class="price_rating">
+                            <div class="rate">
+                                <i class="fa-solid fa-star"></i>
+                                <p style="color: #DC7303;">4.5</p>
+                            </div>
+                            <p class="amount">5000tk</p>
+                        </div>
 
-                  </div>
+                        <a class="explore_btn">Explore Now</a>
 
-              </div>
+                    </div>
 
-              <div class="swiper-slide box">
-                  <div class="image">
-                      <img src="/images/sea-beach.jpg" alt="">
-                  </div>
-                  <div class="content">
+                </div>--%>
 
-                      <div class="agency">
-                          <i class="fa-solid fa-building"></i>
-                          <p>Agency Name</p>
-                      </div>
-
-                      <h4>Package Name</h4>
-                      <p>3 days,4 night</p>
-
-                      <div class="price_rating">
-                          <div class="rate">
-                              <i class="fa-solid fa-star"></i>
-                              <p style="color: #DC7303;">4.5</p>
-                          </div>
-                          <p class="amount">5000tk</p>
-                      </div>
-                      <a href="#" class="explore_btn">Explore Now</a>
-
-                  </div>
-
-              </div>
-
-              <div class="swiper-slide box">
-                  <div class="image">
-                      <img src="/images/sea-beach.jpg" alt="">
-                  </div>
-                  <div class="content">
-
-                      <div class="agency">
-                          <i class="fa-solid fa-building"></i>
-                          <p>Agency Name</p>
-                      </div>
-
-                      <h4>Package Name</h4>
-                      <p>3 days,4 night</p>
-
-                      <div class="price_rating">
-                          <div class="rate">
-                              <i class="fa-solid fa-star"></i>
-                              <p style="color: #DC7303;">4.5</p>
-                          </div>
-                          <p class="amount">5000tk</p>
-                      </div>
-                      <a href="#" class="explore_btn">Explore Now</a>
-
-                  </div>
-
-              </div>
-
-              <div class="swiper-slide box">
-                  <div class="image">
-                      <img src="/images/sea-beach.jpg" alt="">
-                  </div>
-                  <div class="content">
-
-                      <div class="agency">
-                          <i class="fa-solid fa-building"></i>
-                          <p>Agency Name</p>
-                      </div>
-
-                      <h4>Package Name</h4>
-                      <p>3 days,4 night</p>
-
-                      <div class="price_rating">
-                          <div class="rate">
-                              <i class="fa-solid fa-star"></i>
-                              <p style="color: #DC7303;">4.5</p>
-                          </div>
-                          <p class="amount">5000tk</p>
-                      </div>
-                      <a href="#" class="explore_btn">Explore Now</a>
-
-                  </div>
-
-              </div>
-              <div class="swiper-slide box ">
-                  <div class="image">
-                      <img src="/images/sea-beach.jpg" alt="">
-                  </div>
-                  <div class="content">
-
-                      <div class="agency">
-                          <i class="fa-solid fa-building"></i>
-                          <p>Agency Name</p>
-                      </div>
-
-                      <h4>Package Name</h4>
-                      <p>3 days,4 night</p>
-
-                      <div class="price_rating">
-                          <div class="rate">
-                              <i class="fa-solid fa-star"></i>
-                              <p style="color: #DC7303;">4.5</p>
-                          </div>
-                          <p class="amount">5000tk</p>
-                      </div>
-                      <a href="#" class="explore_btn">Explore Now</a>
-
-                  </div>
-
-              </div>
-
-      </div>
+            </div>
 
 
 
-        <div class="swiper-button-next"></div>
-         <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
 
-      </div>
+        </div>
     </section>
 
     <section class="shop" id="shop">
-      <h1 class="heading">Featured Product</h1>
+        <h1 class="heading">Featured Product</h1>
         <div class="swiper product-slider">
-          <div class="swiper-wrapper" id="shop_container" runat="server">
+            <div class="swiper-wrapper" id="shop_container" runat="server">
 
-           
-            <div class="swiper-slide slide">
+                <%--<div class="swiper-slide slide">
 
-              <div class="image">
-                <img src="/images/backpack.png" alt="">
-                <div class="icons">
-                  <a href="#" class="fa-solid fa-cart-shopping"></a>
-                  <a href="#" class="fa-solid fa-eye"></a>
-                </div>
-              </div>
-              <div class="content">
-                <h3>Poduct Name</h3>
-                <div class="price">1000tk</div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-              </div>
+                    <div class="image">
+                        <img src="/images/backpack.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fa-solid fa-cart-shopping"></a>
+                            <a href="#" class="fa-solid fa-eye"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Poduct Name</h3>
+                        <div class="price">1000tk</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
 
-            </div>
-
-            <div class="swiper-slide slide">
-
-              <div class="image">
-                <img src="/images/backpack.png" alt="">
-                <div class="icons">
-                  <a href="#" class="fa-solid fa-cart-shopping"></a>
-                  <a href="#" class="fa-solid fa-eye"></a>
-                </div>
-              </div>
-              <div class="content">
-                <h3>Poduct Name</h3>
-                <div class="price">1000tk</div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-              </div>
+                </div>--%>
 
             </div>
-
-            <div class="swiper-slide slide">
-
-              <div class="image">
-                <img src="/images/backpack.png" alt="">
-                <div class="icons">
-                  <a href="#" class="fa-solid fa-cart-shopping"></a>
-                  <a href="#" class="fa-solid fa-eye"></a>
-                </div>
-              </div>
-              <div class="content">
-                <h3>Poduct Name</h3>
-                <div class="price">1000tk</div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="swiper-slide slide">
-
-              <div class="image">
-                <img src="/images/backpack.png" alt="">
-                <div class="icons">
-                  <a href="#" class="fa-solid fa-cart-shopping"></a>
-                  <a href="#" class="fa-solid fa-eye"></a>
-                </div>
-              </div>
-              <div class="content">
-                <h3>Poduct Name</h3>
-                <div class="price">1000tk</div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-              </div>
-
-            </div>
-
-            <div class="swiper-slide slide">
-
-              <div class="image">
-                <img src="/images/backpack.png" alt="">
-                <div class="icons">
-                  <a href="#" class="fa-solid fa-cart-shopping"></a>
-                  <a href="#" class="fa-solid fa-eye"></a>
-                </div>
-              </div>
-              <div class="content">
-                <h3>Poduct Name</h3>
-                <div class="price">1000tk</div>
-                <div class="stars">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
 
     </section>
 
 
     <section class="blog" id="blog">
-      <h1 class="heading">Blog Posts</h1>
-      <div class="swiper blog-slider">
-        <div class="swiper-wrapper" id="blog_container" runat="server">
+        <h1 class="heading">Blog Posts</h1>
+        <div class="swiper blog-slider">
+            <div class="swiper-wrapper" id="blog_container" runat="server">
 
-          <div class="swiper-slide slide">
-            <img src="/images/blog.jpg" alt="">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-calendar-days"></i>17 Mar, 2023</a>
-              <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
+                <%--<div class="swiper-slide slide">
+                    <img src="/images/blog.jpg" alt="">
+                    <div class="icon">
+                        <a href="#"><i class="fa-solid fa-calendar-days"></i>17 Mar, 2023</a>
+                        <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
+                    </div>
+                    <h3>Blog Title</h3>
+                    <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
+                    <a href="#" class="read_btn">Read More</a>
+                </div>--%>
+
             </div>
-            <h3>Blog Title</h3>
-            <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
-            <a href="#" class="read_btn">Read More</a>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="/images/blog.jpg" alt="">
-            <div class="icon">
-              <a href="#">
-                  <i class="fa-solid fa-calendar-days"></i>
-                  <span>17 Mar, 2023</span>
-
-              </a>
-              <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
-            </div>
-            <h3>Blog Title</h3>
-            <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
-            <a href="#" class="read_btn">Read More</a>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="/images/blog.jpg" alt="">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-calendar-days"></i>17 Mar, 2023</a>
-              <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
-            </div>
-            <h3>Blog Title</h3>
-            <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
-            <a href="#" class="read_btn">Read More</a>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="/images/blog.jpg" alt="">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-calendar-days"></i>17 Mar, 2023</a>
-              <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
-            </div>
-            <h3>Blog Title</h3>
-            <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
-            <a href="#" class="read_btn">Read More</a>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="/images/blog.jpg" alt="">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-calendar-days"></i>17 Mar, 2023</a>
-              <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
-            </div>
-            <h3>Blog Title</h3>
-            <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
-            <a href="#" class="read_btn">Read More</a>
-          </div>
-
-          <div class="swiper-slide slide">
-            <img src="/images/blog.jpg" alt="">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-calendar-days"></i>17 Mar, 2023</a>
-              <a href="#"><i class="fa-solid fa-user"></i>by admin</a>
-            </div>
-            <h3>Blog Title</h3>
-            <p style="color: black;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptatem commodi earum in verita.</p>
-            <a href="#" class="read_btn">Read More</a>
-          </div>
-          
         </div>
-      </div>
     </section>
 
 

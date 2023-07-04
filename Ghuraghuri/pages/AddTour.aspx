@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/AdminMaster.Master" AutoEventWireup="true" CodeBehind="AddTour.aspx.cs" Inherits="Ghuraghuri.pages.WebForm8" ValidateRequest="false" %>
+﻿<%@ Page Title="Add Tour" Language="C#" MasterPageFile="~/pages/AdminMaster.Master" AutoEventWireup="true" CodeBehind="AddTour.aspx.cs" Inherits="Ghuraghuri.pages.WebForm8" ValidateRequest="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../css/style_add_tour.css" rel="stylesheet" />
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
@@ -46,6 +46,17 @@
                  <div class="info">
                      <p runat="server" class="lb">Duration:<span style="color:#ff0000">*</span></p>
                      <asp:TextBox ID="Dur" runat="server"  class="inp"></asp:TextBox>
+                 </div>
+                 <hr>
+             </div>
+         </div>
+     </div>
+        <div class="box">
+          <div class="container">
+             <div class="content">
+                 <div class="info">
+                     <p runat="server" class="lb">Ratings:<span style="color:#ff0000">*</span></p>
+                     <asp:TextBox ID="rt_tour" runat="server"  class="inp"></asp:TextBox>
                  </div>
                  <hr>
              </div>

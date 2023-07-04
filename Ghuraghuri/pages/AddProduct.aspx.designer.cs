@@ -42,6 +42,15 @@ namespace Ghuraghuri.pages
         protected global::System.Web.UI.WebControls.TextBox pd_quantity;
 
         /// <summary>
+        /// rtBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox rtBox;
+
+        /// <summary>
         /// galleryUpload control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace Ghuraghuri.pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload featuredUpload;
+
+        /// <summary>
+        /// error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label error;
 
         /// <summary>
         /// tiny control.

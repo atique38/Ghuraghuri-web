@@ -34,7 +34,7 @@ namespace Ghuraghuri.pages
                     {
                         con.Open();
                     }
-                    string qr1 = "select count(*) from BOOKING where status <> 'Pending'";
+                    string qr1 = "select count(*) from BOOKING where status <> 'Pending' and USER_EMAIL='" + Session["u_email"].ToString() + "'";
                     OracleCommand cmd1 = new OracleCommand(qr1, con);
                     int tourCount = Convert.ToInt32(cmd1.ExecuteScalar());
                     //error.Text = tourCount.ToString();

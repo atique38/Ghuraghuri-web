@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/AdminMaster.Master" AutoEventWireup="true" CodeBehind="BlogWriting.aspx.cs" Inherits="Ghuraghuri.pages.WebForm7" ValidateRequest="false" %>
+﻿<%@ Page Title="Write Blog" Language="C#" MasterPageFile="~/pages/AdminMaster.Master" AutoEventWireup="true" CodeBehind="BlogWriting.aspx.cs" Inherits="Ghuraghuri.pages.WebForm7" ValidateRequest="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script>

@@ -57,13 +57,11 @@
           <a class="nav_spot" href="Spot.aspx">Tourist-spot</a>
           <a class="nav_Shop" href="ShopPage.aspx">Shop</a>
           <a class="nav_blog" href="BlogPage.aspx">Blog</a>
-          <a class="login" href="login">Log In</a>
+          <a class="login" href="LogInOption.aspx">Log In</a>
         </div>
 
         <div class="box">
           <h3>Extra Links</h3>
-          <a class="account" href="#">My account</a>
-          <a class="order" href="#">My order</a>
           <a class="faq" href="#">FAQ</a>
           <a class="support" href="#">Support</a>
           <a class="terms" href="#">Terms and condition</a>
@@ -79,10 +77,10 @@
 
         <div class="box">
           <h3>Contact info</h3>
-          <a href="#"><i class="fa-brands fa-facebook"></i></i>Facebook</a>
-          <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</i></a>
+          <a href="https://www.facebook.com/atique.faisal.3"><i class="fa-brands fa-facebook"></i>Facebook</a>
+          <a href="https://twitter.com/MdAtiqueFaisal2"><i class="fa-brands fa-twitter"></i>Twitter</a>
           <a href="#"><i class="fa-brands fa-square-instagram"></i>Instragram</a>
-          <a href="#"><i class="fa-brands fa-github"></i>Github</a>
+          <a href="https://github.com/atique38/Ghuraghuri-web"><i class="fa-brands fa-github"></i>Github</a>
         </div>
 
       </div>

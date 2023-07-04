@@ -40,7 +40,9 @@ namespace Ghuraghuri.pages
                     
                     string details = reader["PRODUCT_DETAILS"].ToString();
                     string rating = reader["RATINGS"].ToString();
+                    string qn = reader["QUANTITY"].ToString();
 
+                    Constant.quantity = Convert.ToInt32(qn);
                     pdct_name.InnerText = name;
                     pdct_rate.InnerText = rating;
                     
@@ -48,6 +50,8 @@ namespace Ghuraghuri.pages
                     
 
                     product_info.InnerHtml = details;
+                    string txt = qn + " Products are available";
+                    pd_quantity.InnerText = txt;
                     string qr = "select * from product_gallery where id='" + data + "'";
                     OracleCommand cmd2 = new OracleCommand(qr, con);
                     OracleDataReader reader1 = cmd2.ExecuteReader();
@@ -252,6 +256,10 @@ namespace Ghuraghuri.pages
             if (qnt <= 0) 
             {
                 TextBox1.Text = "1";
+            }
+            else if (qnt > Constant.quantity)
+            {
+                TextBox1.Text = Constant.quantity.ToString();
             }
             
         }

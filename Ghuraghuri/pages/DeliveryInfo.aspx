@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="DeliveryInfo.aspx.cs" Inherits="Ghuraghuri.pages.WebForm23" %>
+﻿<%@ Page Title="Delivery Info" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="DeliveryInfo.aspx.cs" Inherits="Ghuraghuri.pages.WebForm23" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../css/style_delivery.css" rel="stylesheet" />
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="PackageDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm12" %>
+﻿<%@ Page Title="Package Details" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="PackageDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm12" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>-->
     <link href="../css/swipper1.css" rel="stylesheet" />
@@ -18,30 +18,21 @@
     </section>
 
     <section class="basic_data">
-         <div class="gallery">
-        <div class="swiper mySwiper">
-    <div class="swiper-wrapper" id="div_container" runat="server">
-     
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-      </div>
-     
-      
-    </div>
-    
-  </div>
-       
+        <div class="gallery">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper" id="div_container" runat="server">
 
-    </div>
+                    <%--<div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                    </div>--%>
+                    
+
+                </div>
+
+            </div>
+
+
+        </div>
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
@@ -67,11 +58,11 @@
                         <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Text="2" class="inp" OnTextChanged="TextBox1_TextChanged" AutoPostBack="true"></asp:TextBox>
                         <asp:Button ID="ApplyBtn" runat="server" Text="Apply" class="btn" OnClick="ApplyBtn_Click" />
                     </asp:Panel>
-                    <asp:Button ID="BookBtn" runat="server" Text="Book Now" class="btn" OnClick="BookBtn_Click"/>
+                    <asp:Button ID="BookBtn" runat="server" Text="Book Now" class="btn" OnClick="BookBtn_Click" />
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
-         
+
     </section>
    
 

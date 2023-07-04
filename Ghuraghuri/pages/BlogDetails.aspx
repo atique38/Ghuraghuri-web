@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="BlogDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm11" %>
+﻿<%@ Page Title="Blog Details" Language="C#" MasterPageFile="~/pages/MasterPage.Master" AutoEventWireup="true" CodeBehind="BlogDetails.aspx.cs" Inherits="Ghuraghuri.pages.WebForm11" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../css/style_blog_details.css" rel="stylesheet" />
 </asp:Content>

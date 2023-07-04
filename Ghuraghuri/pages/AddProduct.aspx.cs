@@ -32,7 +32,7 @@ namespace Ghuraghuri.pages
                 cmd1.Parameters.Add(":name", OracleDbType.Varchar2).Value = pd_name.Text.ToString().Trim();
                 cmd1.Parameters.Add(":price", OracleDbType.Int32).Value = Cost.Text;
                 cmd1.Parameters.Add(":detail", OracleDbType.Clob).Value = content;
-                cmd1.Parameters.Add(":rating", OracleDbType.Decimal).Value = 0.0;
+                cmd1.Parameters.Add(":rating", OracleDbType.Decimal).Value = rtBox.Text;
                 cmd1.Parameters.Add(":quantity", OracleDbType.Int32).Value = pd_quantity.Text;
                 cmd1.Parameters.Add(":image", OracleDbType.Blob).Value = img1;
                 
@@ -63,6 +63,7 @@ namespace Ghuraghuri.pages
                     cmd2.ExecuteNonQuery();
 
                 }
+                error.Text = "Added Successfully.";
                 con.Close();
 
             }

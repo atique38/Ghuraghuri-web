@@ -25,7 +25,7 @@ namespace Ghuraghuri.pages
             {
                 con.Open();
                 string content = tiny.Text;
-                string qr1 = "INSERT INTO tour (agency_email,tour_name,price,tour_duration,description,photo,ratings) VALUES (:email, :name, :price, :duration, :description, :image,0.0)";
+                string qr1 = "INSERT INTO tour (agency_email,tour_name,price,tour_duration,description,photo,ratings) VALUES (:email, :name, :price, :duration, :description, :image,:rt)";
                 string email = Session["u_email"].ToString();
                 OracleCommand cmd1 = new OracleCommand(qr1, con);
                 cmd1.Parameters.Add(":email", OracleDbType.Varchar2).Value = email;
@@ -33,11 +33,13 @@ namespace Ghuraghuri.pages
                 cmd1.Parameters.Add(":price", OracleDbType.Int32).Value = Cost.Text;
                 cmd1.Parameters.Add(":duration", OracleDbType.Varchar2).Value = Dur.Text.ToString().Trim();
                 
+                
                 //Response.Write("<script>alert('" + content + "');</script>");
                 byte[] img1 = featuredUpload.FileBytes;
                 //byte[] img2 = galleryUpload.FileBytes;
                 cmd1.Parameters.Add(":description", OracleDbType.Clob).Value = content;
                 cmd1.Parameters.Add(":image", OracleDbType.Blob).Value = img1;
+                cmd1.Parameters.Add(":rt", OracleDbType.Decimal).Value = rt_tour.Text;
                 cmd1.ExecuteNonQuery();
 
                 string query = "SELECT id FROM (select * from tour order by id desc) where rownum=1";

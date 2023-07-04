@@ -14,10 +14,10 @@
         <nav class="nav">
             <div id="nav_close" class="fa-solid fa-xmark"></div>
             <a class="home" href="Home.aspx" runat="server">Home</a>
-            <a class="packages" href="#" runat="server">Packages</a>
-            <a class="nav_spot" href="#" runat="server">Tourist-spot</a>
-            <a class="nav_Shop" href="#" runat="server">Shop</a>
-            <a class="nav_blog" href="#" runat="server">Blog</a>
+            <a class="packages" href="Packages.aspx" runat="server">Packages</a>
+            <a class="nav_spot" href="Spot.aspx" runat="server">Tourist-spot</a>
+            <a class="nav_Shop" href="ShopPage.aspx" runat="server">Shop</a>
+            <a class="nav_blog" href="BlogPage.aspx" runat="server">Blog</a>
             <a class="login" href="LogInOption.aspx" runat="server">Log In</a>
         </nav>
         <div class="icons">

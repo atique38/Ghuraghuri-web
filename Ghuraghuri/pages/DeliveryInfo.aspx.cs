@@ -64,6 +64,16 @@ namespace Ghuraghuri.pages
                     //, :uname, :pdid, :pdname, :qn, :price, :date, :status
 
                     cmd2.ExecuteNonQuery();
+
+                    string sql2 = "select QUANTITY from PRODUCT where ID='" + pid + "'";
+                    OracleCommand oracleCommand = new OracleCommand(sql2, con);
+                    int totalQn=Convert.ToInt32(oracleCommand.ExecuteScalar());
+                    int remain = totalQn - Convert.ToInt32(qn);
+
+                    string sql3 = "update PRODUCT set QUANTITY='" + remain + "' where ID='" + pid + "'";
+                    OracleCommand oracleCommand1 = new OracleCommand(sql3, con);
+                    oracleCommand1.ExecuteNonQuery();
+
                     cnt++;
 
                 }
