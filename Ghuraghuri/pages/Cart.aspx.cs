@@ -28,20 +28,21 @@ namespace Ghuraghuri.pages
                 if (Session["u_email"] != null)
                 {
                     string id = Request.QueryString["data"];
-                    
+
                     //error.Text = Constant.clicked.ToString();
                     if (!string.IsNullOrEmpty(id))
                     {
                         //Constant.clicked = false;
 
-                        if(!isItemAlreadyExist(id))
+                        if (!isItemAlreadyExist(id))
                         {
                             addToCart(id);
                             //Response.Redirect("Cart.aspx");
                         }
                     }
                     PopulateProductList();
-                    
+
+
                 }
                 else
                 {
@@ -139,6 +140,7 @@ namespace Ghuraghuri.pages
 
                     row.Cells.Add(product);
 
+                    //int mxqn = Convert.ToInt32(qn);
                     TextBox textBox = new TextBox();
                     textBox.Attributes["class"] = "input";
                     textBox.TextMode = TextBoxMode.Number;

@@ -75,9 +75,10 @@ namespace Ghuraghuri.pages
 
                     HtmlGenericControl a1 = new HtmlGenericControl("a");
                     a1.Attributes["class"] = "fa-solid fa-cart-shopping";
+                    a1.Attributes["onclick"] = "addToCart('" + id + "')";
                     HtmlGenericControl a2 = new HtmlGenericControl("a");
                     a2.Attributes["class"] = "fa-solid fa-eye";
-                    a2.Attributes["onclick"] = "productClicked('" + id + "')"; ;
+                    a2.Attributes["onclick"] = "productClicked('" + id + "')"; 
                     div3.Controls.Add(a1);
                     div3.Controls.Add(a2);
 

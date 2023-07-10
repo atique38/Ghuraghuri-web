@@ -21,4 +21,6 @@ function validateNonNegative(textBox) {
     if (value <= 0) {
         textBox.value = 1
     }
+   
 }
+

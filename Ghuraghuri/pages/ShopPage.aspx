@@ -49,5 +49,6 @@
 
 
     </section>
-    <script src="../javascript/home_script.js"></script>
+    <%--<script src="../javascript/home_script.js"></script>--%>
+    <script src="../javascript/passing_script.js"></script>
 </asp:Content>
